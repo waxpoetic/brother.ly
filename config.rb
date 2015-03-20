@@ -2,25 +2,7 @@
 # brother.ly site settings
 ###
 
- Time.zone = "EST"
-
-activate :blog do |blog|
-  blog.permalink = "{year}/{month}/{day}/{title}.html"
-  blog.sources = "events/{year}-{month}-{day}.html"
-  # blog.taglink = "tag/{tag}.html"
-  # blog.layout = "layout"
-  # blog.summary_separator = /(READMORE)/
-  # blog.summary_length = 250
-  # blog.year_link = "{year}.html"
-  # blog.month_link = "{year}/{month}.html"
-  # blog.day_link = "{year}/{month}/{day}.html"
-  # blog.default_extension = ".md"
-  blog.tag_template = "tag.html"
-  #blog.calendar_template = "calendar.html"
-  blog.paginate = true
-  blog.per_page = 1
-  blog.page_link = "page/{num}"
-end
+Time.zone = "EST"
 
 set :casper, {
   blog: {
@@ -40,21 +22,7 @@ set :casper, {
   }
 }
 
-page '/feed.xml', layout: false
-page '/sitemap.xml', layout: false
-
 ignore '/partials/*'
-
-ready do
-  blog.tags.each do |tag, articles|
-    proxy "/tag/#{tag.downcase.parameterize}/feed.xml", '/feed.xml', layout: false do
-      @tagname = tag
-      @articles = articles[0..5]
-    end
-  end
-
-  proxy "/author/#{blog_author.name.parameterize}.html", '/author.html', ignore: true
-end
 
 ###
 # Compass

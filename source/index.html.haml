@@ -1,24 +1,33 @@
 ---
 pageable: true
 per_page: 6
-cover: test-cover.jpg
+cover: blurred.jpg
 ---
 
 %header.main-header{cover}
   %nav.main-nav.overlay.clearfix
-    - if blog_settings.logo.present?
-      %a.blog-logo{href: home_path}
-        = image_tag blog_settings.logo, alt: 'brother.ly'
+    /%a.blog-logo{href: home_path}= image_tag 'logo.png', alt: 'brother.ly'
     %section.buttons
-      %a.subscribe-button.icon-stats{href: home_path+'#next'} Watch
-      %a.subscribe-button.icon-feed{href: feed_path} Subscribe
-      %a.subscribe-button.icon-location{href: home_path+'#next'} Experience
+      /%a.subscribe-button.icon-stats{href: '#watch'} Watch
+      %a.subscribe-button.icon-feed{href: '#transmission'} Next Transmission
+      /%a.subscribe-button.icon-feed{href: '/feed.xml'} Subscribe
+      /%a.subscribe-button.icon-feed{href: 'https://twitter.com/brotherlyparty'} Follow
   .vertical
     .main-header-content.inner
-      %h1.page-title= blog_settings.name
-      %h2.page-description= blog_settings.description
+      %h1.page-title brother.ly
+      %h2.page-description an intimate affair...
+      - if current_page.data.accepting_signups
+        %form#sign-up-form{ method: 'post', action: '?' }
+          .field
+            %label{ for: 'name' } Name
+            %input{ type: 'text', name: 'name' }
+          .field
+            %label{ for: 'email' } E-Mail Address
+            %input{ type: 'email', name: 'email' }
+          .controls
+            %input{ type: 'submit', value: 'RSVP to Attend' }
   %a.scroll-down.icon-arrow-left{href: '#content', data: {offset: '-45'}}
     %span.hidden Scroll Down
 
 %main#content.content{role: :main}
-  = partial(:page_articles)
+  = partial :transmission

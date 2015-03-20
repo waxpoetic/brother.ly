@@ -1,8 +1,6 @@
 - paginate = current_resource.metadata[:locals]['paginate']
 
 .extra-pagination.inner
-  = partial(:pagination) if paginate
-
 - page_articles.each_with_index do |article, i|
   %article.post
     %header.post-header

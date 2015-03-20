@@ -1,6 +1,10 @@
 @import 'vendor/casper';
 @import 'syntax';
 
+body {
+  background: #000;
+}
+
 // Overwrite some styles from casper.css
 pre {
   background: transparent;
@@ -17,4 +21,78 @@ nav {
       margin-right: 10px;
     }
   }
+}
+
+#content section {
+  background: #222 no-repeat center center;
+  background-image: url(/images/maxresdefault.jpg);
+  .body {
+    padding: 15%;
+    margin-bottom: 1024px;
+
+    h1, h2, h3, p, ul, li {
+      color: white;
+      text-shadow: 2px 2px #222;
+    }
+
+    .lineup {
+      float: right
+    }
+
+    .buttons {
+      clear: both;
+    }
+
+    clear: both;
+  }
+}
+
+.back-to-top {
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.page-description {
+  clear: both;
+  margin: 0 auto !important;
+  text-align: center;
+  font-size: 3rem;
+}
+
+#sign-up-form {
+  @extend .page-description;
+  text-align: left;
+  font-size: 2rem;
+  line-height: 4rem;
+
+}
+
+form  {
+  display: table;
+}
+form p     { display: table-row;  }
+form label, form input { display: table-cell; }
+form .field {
+  margin-bottom: 10px;
+}
+form .controls {
+  margin: 27px 0;
+}
+form .controls input[type="submit"] {
+  padding: 15px;
+}
+form .field input {
+  width: 98%;
+  font-family: "Open Sans", sans-serif;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid white;
+  color: white;
+}
+
+.page-title {
+  text-shadow: 2px 2px #222;
 }

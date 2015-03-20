@@ -3,6 +3,14 @@ require 'sanitize'
 require 'digest/md5'
 
 module MiddlemanCasperHelpers
+  def page_articles
+    []
+  end
+
+  def is_blog_article?
+    false
+  end
+
   def page_title
     title = blog_settings.name.dup
     if is_tag_page?
@@ -99,13 +107,13 @@ module MiddlemanCasperHelpers
     if is_tag_page?
       "#{current_page.url.to_s}feed.xml"
     else
-      "#{blog.options.prefix.to_s}/feed.xml"
+      "/feed.xml"
     end
   end
   def home_path
-    "#{blog.options.prefix.to_s}/"
+    "/"
   end
   def author_path
-    "#{blog.options.prefix.to_s}/author/#{blog_author.name.parameterize}/"
+    "/author/#{blog_author.name.parameterize}/"
   end
 end
