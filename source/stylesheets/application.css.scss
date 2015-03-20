@@ -26,9 +26,10 @@ nav {
 #content section {
   background: #222 no-repeat center center;
   background-image: url(/images/maxresdefault.jpg);
+  min-height: 730px;
+
   .body {
     padding: 15%;
-    margin-bottom: 1024px;
 
     h1, h2, h3, p, ul, li {
       color: white;
