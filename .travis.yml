@@ -4,3 +4,5 @@ script: make
 deploy:
   provider: s3
   bucket: "brother.ly"
+  acl: public_read
+  local_dir: build
