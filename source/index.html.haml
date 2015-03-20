@@ -1,6 +1,7 @@
 ---
 pageable: true
 per_page: 6
+cover: test-cover.jpg
 ---
 
 %header.main-header{cover}
@@ -8,7 +9,10 @@ per_page: 6
     - if blog_settings.logo.present?
       %a.blog-logo{href: home_path}
         = image_tag blog_settings.logo, alt: 'brother.ly'
-    %a.subscribe-button.icon-feed{href: feed_path} Subscribe
+    %section.buttons
+      %a.subscribe-button.icon-stats{href: home_path+'#next'} Watch
+      %a.subscribe-button.icon-feed{href: feed_path} Subscribe
+      %a.subscribe-button.icon-location{href: home_path+'#next'} Experience
   .vertical
     .main-header-content.inner
       %h1.page-title= blog_settings.name

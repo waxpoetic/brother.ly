@@ -7,3 +7,14 @@ pre {
   border-style: none;
   padding: initial;
 }
+
+nav {
+  .buttons {
+    float: right;
+
+    .subscribe-button {
+      float: left;
+      margin-right: 10px;
+    }
+  }
+}
