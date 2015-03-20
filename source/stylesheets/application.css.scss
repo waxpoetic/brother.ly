@@ -24,12 +24,11 @@ nav {
 }
 
 #content section {
-  background: #222 no-repeat center center;
-  background-image: url(/images/maxresdefault.jpg);
-  min-height: 730px;
+  min-height: 1000px;
 
   .body {
     padding: 15%;
+    min-width: 600px;
 
     h1, h2, h3, p, ul, li {
       color: white;
@@ -48,12 +47,19 @@ nav {
   }
 }
 
+#transmission {
+  background: #222 no-repeat center center;
+  background-image: url(/images/maxresdefault.jpg);
+}
+
 .back-to-top {
+  @extend .subscribe-button;
+  float: left;
+  position: relative;
+  top: 50px;
   font-family: "Open Sans", sans-serif;
   text-decoration: none;
-  font-weight: bold;
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
+  border-color: #333;
 }
 
 .page-description {
@@ -68,7 +74,6 @@ nav {
   text-align: left;
   font-size: 2rem;
   line-height: 4rem;
-
 }
 
 form  {
