@@ -1,95 +1,47 @@
-# middleman-casper
+# brother.ly
 
-[![Casper Version](https://img.shields.io/badge/Casper-1.1.3-brightgreen.svg?style=flat)](https://github.com/TryGhost/Casper)
-
-The [Casper](https://github.com/TryGhost/Casper) theme
-([Ghost](https://github.com/TryGhost/Ghost)) for
-[Middleman-Blog](http://middlemanapp.com/basics/blogging/).
+The official website for Wax Poetic's ultra-intimate streaming events.
 
 ## Installation
 
-1. Clone **middleman-casper** into `~/.middleman`.
-   You will need to create this directory if it doesn't exist.
-   ```bash
-   $ git clone https://github.com/danielbayerlein/middleman-casper.git ~/.middleman/casper
-   ```
+Clone this repo:
 
-2. Create a new project with the template:
-   ```bash
-   $ middleman init blog --template=casper
-   ```
+```bash
+$ git clone git://github.com/waxpoetic/brother.ly.git
+$ cd brother.ly
+```
 
-3. Change the `casper` settings in `config.rb`.
+Install dependencies:
+
+```bash
+$ gem install bundler
+$ bundle install
+```
+
+Build the project:
+
+```bash
+$ make
+```
 
 ## Usage
 
-Start a local web server running at `http://localhost:4567/` with:
+You can also run `./bin/brotherly` to start the development server.
+
+## Deployment
+
+Configure your settings:
 
 ```bash
-$ middleman server
+$ cp .env.example .env
+$ vi .env
 ```
 
-Create a static file with:
+Then run this command to deploy:
 
 ```bash
-$ middleman build
+$ make deploy
 ```
-
-For help, see the official [Middleman](http://middlemanapp.com) website.
-
-### Logo
-
-Configurable in *config.rb*:
-
-```ruby
-set :casper, {
-  ...
-  blog: {
-    logo: 'my-awesome-blog-logo.png' # sources/images/my-awesome-blog-logo.png
-  }
-  ...
-}
-```
-
-### Pages
-
-Content of *example.html.markdown*:
-
-```markdown
----
-title: Example
-layout: page
----
-
-Welcome!
-
-```
-
-### Covers
-
-Covers are availible in pages and articles. Content of *example.html.markdown*:
-
-```markdown
----
-title: Example
-layout: page
-cover: my-awesome-blog-cover.png # sources/images/my-awesome-blog-cover.png
----
-
-Welcome!
-
-```
-
-## TODO
-
-* Multiple authors
-* i18n
-* 404
-
-## Special Thanks
-
-* [Ghost Foundation](https://github.com/TryGhost/Ghost) for
-  [Casper](https://github.com/TryGhost/Casper)
 
 ## Contributing
 
@@ -103,7 +55,7 @@ Welcome!
 
 The MIT License (MIT)
 
-Copyright (c) 2015 Daniel Bayerlein
+Copyright (c) 2015 Wax Poetic Music, LLC
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

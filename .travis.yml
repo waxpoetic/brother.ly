@@ -1,0 +1,6 @@
+language: ruby
+cache: bundler
+script: make
+deploy:
+  provider: s3
+  bucket: "brother.ly"

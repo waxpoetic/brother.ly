@@ -1,8 +1,10 @@
+# brother.ly Makefile
+
 SHELL = /bin/bash
 
 .PHONY: clean build deploy all
 
-all: deploy
+all: build
 
 clean:
 	rm -r build
