@@ -21,7 +21,7 @@ cover: blurred.jpg
       %h2.page-description
         %br
         coming soon...
-      - if current_page.data.accepting_signups
+      - if env.open_signups?
         #thank-you-message
           %p
             Thank you for signing up. We will email you when the party starts

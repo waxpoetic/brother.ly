@@ -33,6 +33,7 @@ GEM
     compass-import-once (1.0.5)
       sass (>= 3.2, < 3.5)
     crass (1.0.1)
+    dotenv (1.0.2)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
@@ -171,6 +172,9 @@ GEM
       middleman-sprockets (>= 3.1.2)
       sass (>= 3.4.0, < 4.0)
       uglifier (~> 2.5)
+    middleman-cloudfront (0.1.1)
+      fog (~> 1.9)
+      middleman-core (~> 3.0)
     middleman-core (3.3.10)
       activesupport (~> 4.1.0)
       bundler (~> 1.1)
@@ -183,6 +187,9 @@ GEM
       rack-test (~> 0.6.2)
       thor (>= 0.15.2, < 2.0)
       tilt (~> 1.4.1, < 2.0)
+    middleman-dotenv (1.1.1)
+      dotenv (~> 1.0)
+      middleman-core (>= 3.2)
     middleman-livereload (3.4.2)
       em-websocket (~> 0.5.1)
       middleman-core (>= 3.3)
@@ -293,6 +300,8 @@ PLATFORMS
 DEPENDENCIES
   jquery-middleman
   middleman (~> 3.3.10)
+  middleman-cloudfront
+  middleman-dotenv
   middleman-livereload (~> 3.4.2)
   middleman-s3_sync
   middleman-syntax (~> 2.0.0)

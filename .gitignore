@@ -22,3 +22,6 @@
 
 # Ignore secret keys
 .env
+
+# Ignore ctags
+tags
