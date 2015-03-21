@@ -91,16 +91,13 @@ set :partials_dir, 'partials'
 # Build-specific configuration
 configure :build do
   # Change the Compass output style for deployment
-  #activate :minify_css
+  activate :minify_css
 
   # Minify Javascript on build
-  #activate :minify_javascript
-
-  # Enable cache buster
-  #activate :asset_hash
+  activate :minify_javascript
 
   # Use relative URLs
-  #activate :relative_assets
+  activate :relative_assets
 end
 
 # Deploy to Amazon S3

@@ -1,4 +1,6 @@
-# brother.ly Makefile
+#
+# Makefile for the brother.ly official site
+#
 
 SHELL = /bin/bash
 
@@ -9,7 +11,10 @@ all: build
 clean:
 	rm -rf build
 
-build: clean
+vendor/bundle:
+	bundle install --quiet
+
+build: vendor/bundle clean
 	bundle exec middleman build
 
 deploy: build
