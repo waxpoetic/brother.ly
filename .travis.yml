@@ -6,11 +6,11 @@ deploy:
   provider: s3
   bucket: brother.ly
   acl: public_read
-  local_dir: ./build
-  secret_access_key:
-    secure: ZCYqdpfZEkpTQzhLtDRjv/dpv2irh79N+QNu/2FkH+oGM2XkXIXrFmn1rzG2GgGh356TkoR7aV09siduGp7IJSsMiJ2cBJVlxVx2AuDzDnssq9W00de5VO9OIyfTliUJQ/zibH09VFNixza7s3c5vKBZq1a3tmlVUR1ec9uet9E=
-  access_key_id:
-    secure: YxdnBBDhyORNek8ePwZaDOEOM1Q/8wcEqluN0G7LGKuleMAUQMjFbgeSv3FJOot9uBOXLS9ypI4asyDWd3quDpgdlbOalZTmTfbq23c2hZ3TVPKdNxGLknisBlmt/JNl0hcA+OtV9cSeZj0K5iWQvVZsLGweA8AlJEekA0qwEu4=
+  local_dir: "./build"
   skip_cleanup: true
   endpoint: psychedeli.ca.s3-website-us-east-1.amazonaws.com
   detect_encoding: true
+  access_key_id:
+    secure: ClGk2sYEjCWOy2fINesXH90UI3hN2fuddCJZ3asuo4M2dTx5vXkBk5pIri+UL5shUYhaiDTPnFPE3y2xN9YPymHKK5NSAbHNe7YsnzM4/9e0bhES1LZk05Ui+y6HAVhprTvOHdVb5/WmahZ/H9XNYd4SUeh46gdB7VGyGlj7uoo=
+  secret_access_key:
+    secure: LDgNdFtJtcZG0J7MDwPHju5KV5/AB8qj0PSadae4fCaqXiErQg/v83Cp1Lsq6rAgZ+qkTFUnYERSDQN3oyXmlWxnSGQWf72YjUR9JNGCXe7LIjUKUhWXtTjUfjolJR/BuTeuPspiKXdx0goDIYYFNENZOWkRmPPxYBvb+nKTPWE=
