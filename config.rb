@@ -1,3 +1,5 @@
+require 'dotenv'
+
 ###
 # brother.ly site settings
 ###
@@ -106,6 +108,8 @@ end
 #   s3_sync.prefix                     = ''
 #   s3_sync.version_bucket             = false
 # end
+
+Dotenv.load
 
 # Invalidate CloudFront CDN caches when building
 activate :cloudfront do |cf|
