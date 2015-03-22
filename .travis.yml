@@ -3,6 +3,10 @@ cache: bundler
 script: make
 deploy:
   provider: s3
-  bucket: "brother.ly"
+  bucket: brother.ly
   acl: public_read
   local_dir: build
+  secret_access_key:
+    secure: ZCYqdpfZEkpTQzhLtDRjv/dpv2irh79N+QNu/2FkH+oGM2XkXIXrFmn1rzG2GgGh356TkoR7aV09siduGp7IJSsMiJ2cBJVlxVx2AuDzDnssq9W00de5VO9OIyfTliUJQ/zibH09VFNixza7s3c5vKBZq1a3tmlVUR1ec9uet9E=
+  access_key_id:
+    secure: YxdnBBDhyORNek8ePwZaDOEOM1Q/8wcEqluN0G7LGKuleMAUQMjFbgeSv3FJOot9uBOXLS9ypI4asyDWd3quDpgdlbOalZTmTfbq23c2hZ3TVPKdNxGLknisBlmt/JNl0hcA+OtV9cSeZj0K5iWQvVZsLGweA8AlJEekA0qwEu4=
