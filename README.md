@@ -4,11 +4,8 @@ The official website for [Wax Poetic Records][waxpoetic]' late-night
 intimate streaming events. Every month, we select the best producers of
 Philadelphia's booming electronic music scene and showcase their latest
 and greatest work in an ultra-private setting. The location is never
-publicly announced, and 
-
-The official website for Wax Poetic's ultra-intimate streaming events.
-It's hosted by Amazon S3 and distributed by Amazon CloudFront for fast
-access. 
+publicly announced, but anyone can experience the event by visiting
+http://brother.ly, where we'll be streaming the event live on YouTube.
 
 ## Installation
 
@@ -76,3 +73,5 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+
+[waxpoetic]: http://waxpoeticrecords.com
