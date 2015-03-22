@@ -10,6 +10,10 @@ gem 'redcarpet', '~> 3.2.2'
 gem 'nokogiri', '~> 1.6.6.2'
 gem 'sanitize', '~> 3.1.2'
 gem 'travis'
-gem 'jquery-middleman'
 gem 'middleman-dotenv'
 gem 'middleman-cloudfront'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-jquery'
+  gem 'rails-assets-jquery.sticky'
+end

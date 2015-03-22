@@ -1,5 +1,7 @@
 # brother.ly
 
+[![Build Status](https://travis-ci.org/waxpoetic/brother.ly.svg?branch=master)](https://travis-ci.org/waxpoetic/brother.ly)
+
 The official website for [Wax Poetic Records][waxpoetic]' late-night
 intimate streaming events. Every month, we select the best producers of
 Philadelphia's booming electronic music scene and showcase their latest
