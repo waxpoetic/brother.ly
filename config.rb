@@ -118,3 +118,25 @@ activate :cloudfront do |cf|
   cf.distribution_id = ENV['AWS_CLOUDFRONT_DISTRO_ID']
   cf.after_build = ENV['CI']
 end
+
+# Generate a sitemap.xml file for search engines
+set :url_root, 'http://brother.ly'
+activate :search_engine_sitemap
+# Filewatcher ignore list
+set :file_watcher_ignore, [
+  /^bin(\/|$)/,
+  /^\.bundle(\/|$)/,
+  #/^vendor(\/|$)/,
+  /^node_modules(\/|$)/,
+  /^\.sass-cache(\/|$)/,
+  /^\.cache(\/|$)/,
+  /^\.git(\/|$)/,
+  /^\.gitignore$/,
+  /\.DS_Store/,
+  /^\.rbenv-.*$/,
+  /^Gemfile$/,
+  /^Gemfile\.lock$/,
+  /~$/,
+  /(^|\/)\.?#/,
+  /^tmp\//
+]
