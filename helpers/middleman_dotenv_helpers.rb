@@ -21,34 +21,7 @@ module MiddlemanDotenvHelpers
     end
 
     def method_missing(method, *arguments)
-      super unless respond_to? method
-      get attr_name_for(method)
-    end
-
-    def respond_to?(method)
-      attr_exists?(method) || super
-    end
-
-    private
-
-    def attr_exists?(method)
-      !ENV[env_name_for(method)].nil?
-    end
-
-    def env_name_for(method)
-      method.to_s.upcase
-    end
-
-    def attr_name_for(method_name)
-      env_name_for method_name.to_s.gsub(/=\Z/, '').downcase
-    end
-
-    def get(attribute)
-      if attribute =~ /\?\Z/
-        !!ENV[attribute]
-      else
-        ENV[attribute]
-      end
+      ENV[method.to_s.upcase]
     end
   end
 end
