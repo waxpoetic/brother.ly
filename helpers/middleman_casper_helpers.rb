@@ -21,6 +21,10 @@ module MiddlemanCasperHelpers
     blog_settings.description
   end
 
+  def site_url
+    blog_settings.url
+  end
+
   def page_class
     if blog_article? || current_page.data.layout == 'page'
       'post-template'

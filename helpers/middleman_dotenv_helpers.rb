@@ -20,7 +20,7 @@ module MiddlemanDotenvHelpers
       Dotenv.load
     end
 
-    def method_missing(method, *arguments)
+    def method_missing(method)
       ENV[method.to_s.upcase]
     end
   end
