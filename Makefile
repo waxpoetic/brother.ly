@@ -23,7 +23,4 @@ deploy: build
 check:
 	bundle exec rubocop
 
-server:
-	bundle exec middleman server
-
 test: check build

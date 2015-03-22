@@ -27,7 +27,12 @@
       %section.copyright
         &copy;
         = Time.now.year
-        %a{href: 'http://www.waxpoeticrecords.com'} wax poetic records
+        %a{href: 'http://waxpoeticrecords.com', target: '_blank'}
+          wax poetic records
+        &bull;
+        %a{href: 'https://github.com/waxpoetic/brother.ly/issues/new', target: '_blank'}
+          report an issue
+
 
     = javascript_include_tag :application
     :javascript

@@ -21,37 +21,10 @@ $ cd brother.ly
 $ bundle && make
 ```
 
-## Deployment
+## Development
 
-We host http://brother.ly on Amazon Web Services, originating the files
-from S3 and utilizing the CloudFront CDN for speed. In order to use the
-deployment command, you need to have certain environment variables set.
-For security reasons, these environment variables do not come packaged
-with the codebase:
-
-```bash
-$ export AWS_ACCESS_KEY_ID='your-iam-users-access-key'
-$ export AWS_SECRET_ACCESS_KEY='your-iam-users-secret-key'
-$ export AWS_S3_BUCKET_NAME='by-default-this-is-brother.ly'
-$ export AWS_CDN_DISTRO_ID='find-this-on-the-cloudfront-page'
-```
-
-Alternatively, you can use the built-in dotenv support:
-
-```bash
-$ cp .env.development .env
-$ vi .env
-```
-
-It will automatically be picked up by middleman and inserted into the
-app.
-
-Once those environment variables are set, go ahead and run the
-deployment command:
-
-```bash
-$ make deploy
-```
+Contributions are welcome in pull request format. Please open an issue
+if you find anything wrong with the site.
 
 ## License
 
