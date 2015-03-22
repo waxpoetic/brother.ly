@@ -15,7 +15,7 @@ clean:
 	rm -rf build
 
 build: clean
-	bundle exec middleman build --verbose
+	bundle exec middleman build
 
 check:
 	bundle exec rubocop
