@@ -1,6 +1,6 @@
-#
-# Makefile for the brother.ly official site
-#
+# These are the build scripts for the brother.ly official site. Using
+# this file, the entire site can be compiled and installed by running a
+# single command: `make`.
 
 SHELL = /bin/bash
 
@@ -8,13 +8,16 @@ SHELL = /bin/bash
 
 all: build
 
+vendor/bundle:
+	bundle install --path=vendor/bundle --quiet
+
 config:
 	cp .env.development .env
 
 clean:
 	rm -rf build
 
-build: clean
+build: vendor/bundle clean
 	bundle exec middleman build
 
 check:

@@ -1,7 +1,6 @@
 ---
+title: an intimate affair
 cover: blurred.jpg
-open_signups: false
-live_event: false
 priority: 1.0
 ---
 
@@ -10,14 +9,12 @@ priority: 1.0
   .vertical
     #splash.main-header-content.inner
 
-      %h1.page-title brother.ly
-      %h2.page-description#slogan
-        a private, intimate showcase of
-        philadelphia's live electronic music scene
+      %h1.page-title= site_title
+      %h2.page-description#slogan= site_description
 
-      - if current_page.data.open_signups
+      - if open_signups?
         = partial :signup
-      - elsif current_page.data.live_event
+      - elsif live_event?
         / embed youtube code for live event
       - else
         %h2.page-description#signups-closed coming soon...

@@ -1,20 +1,12 @@
 !!! 5
-%html
+%html{lang: 'en'}
   %head
     %title= page_title
-    %meta{name: :description, content: page_description}
     %meta{charset: 'utf-8'}
     %meta{name: :viewport, content: 'width=device-width, initial-scale=1.0'}
     %meta{'http-equiv' => 'X-UA-Compatible', content: 'IE=edge'}
     %meta{name: 'HandheldFriendly', content: 'True'}
-    %meta{property: 'og:url', content: site_url}
-    %meta{property: 'og:description', content: page_description}
-    %meta{property: 'og:locale', content: 'en_US'}
-    %meta{property: 'og:site_name', content: 'brother.ly'}
-    %meta{property: 'fb:app_id', content: env.facebook_app_id}
-    /%meta{property: 'og:image', content: logo_image_path}
-    %meta{property: 'og:type', content: 'place'}
-    = feed_tag :atom, "/feed.xml", title: "Atom Feed"
+    = auto_detect_meta_tags
     = favicon_tag 'images/favicon.ico'
     = stylesheet_link_tag :application
     %link{rel: 'canonical', href: site_url}

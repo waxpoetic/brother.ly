@@ -1,30 +1,15 @@
+RACK_ENV = ENV['RACK_ENV'] || 'development'
+
+require 'bundler/setup'
 require 'dotenv'
+
+Bundler.require :default, RACK_ENV
 
 ###
 # brother.ly site settings
 ###
 
 Time.zone = 'EST'
-
-casper_settings = {
-  blog: {
-    url: 'http://brother.ly',
-    name: 'brother.ly',
-    description: 'an intimate affair',
-    date_format: '%d %B %Y',
-    logo: 'logo.png'
-  },
-  author: {
-    name: 'Middleman',
-    bio: 'Middleman is a static site generator using all the ' \
-         'shortcuts and tools in modern web development.',
-    location: nil, # Optional
-    website: nil, # Optional
-    gravatar_email: nil # Optional
-  }
-}
-
-set :casper, casper_settings
 
 ignore '/partials/*'
 
@@ -70,6 +55,11 @@ activate :livereload
 
 # Pretty URLs - http://middlemanapp.com/basics/pretty-urls/
 activate :directory_indexes
+
+# Meta tag helpers
+activate :meta_tags
+set_meta_tags \
+  'fb:app_id' => ENV['FACEBOOK_APP_ID']
 
 # Directory settings
 set :css_dir, 'stylesheets'

@@ -6,6 +6,8 @@ gem 'middleman', '~> 3.3.10'
 gem 'middleman-dotenv'
 gem 'middleman-cloudfront'
 gem 'middleman-search_engine_sitemap'
+gem 'middleman-meta-tags'
+gem 'middleman-title'
 
 group :development do
   gem 'travis'

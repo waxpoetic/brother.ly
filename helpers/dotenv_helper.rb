@@ -1,7 +1,7 @@
 require 'dotenv'
 
 # Support for dotenv configuration within the view.
-module MiddlemanDotenvHelpers
+module DotenvHelper
   def env
     @config ||= DotenvConfiguration.new
   end
