@@ -2,9 +2,9 @@
 # brother.ly site settings
 ###
 
-Time.zone = "EST"
+Time.zone = 'EST'
 
-set :casper, {
+casper_settings = {
   blog: {
     url: 'http://brother.ly',
     name: 'brother.ly',
@@ -21,6 +21,8 @@ set :casper, {
     gravatar_email: nil # Optional
   }
 }
+
+set :casper, casper_settings
 
 ignore '/partials/*'
 
@@ -68,7 +70,7 @@ activate :livereload
 activate :directory_indexes
 
 # Middleman-Syntax - https://github.com/middleman/middleman-syntax
-set :haml, { ugly: true }
+set :haml, ugly: true
 set :markdown_engine, :redcarpet
 set :markdown, fenced_code_blocks: true, smartypants: true
 activate :syntax, line_numbers: true
@@ -109,8 +111,8 @@ activate :s3_sync do |s3_sync|
   s3_sync.region                     = ENV['AWS_DEFAULT_REGION']
   s3_sync.aws_access_key_id          = ENV['AWS_ACCESS_KEY_ID']
   s3_sync.aws_secret_access_key      = ENV['AWS_SECRET_ACCESS_KEY']
-  s3_sync.delete                     = false # We delete stray files by default.
-  s3_sync.after_build                = false # We do not chain after the build step by default.
+  s3_sync.delete                     = false
+  s3_sync.after_build                = false
   s3_sync.prefer_gzip                = true
   s3_sync.path_style                 = true
   s3_sync.reduced_redundancy_storage = false
@@ -125,5 +127,5 @@ activate :cloudfront do |cf|
   cf.access_key_id = ENV['AWS_ACCESS_KEY_ID']
   cf.secret_access_key = ENV['AWS_SECRET_ACCESS_KEY']
   cf.distribution_id = ENV['AWS_CLOUDFRONT_DISTRO_ID']
-  cf.after_build = true
+  cf.after_build = false
 end

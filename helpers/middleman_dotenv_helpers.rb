@@ -1,33 +1,45 @@
+
+# Support for dotenv configuration within the view.
 module MiddlemanDotenvHelpers
   def env
     @config ||= DotenvConfiguration.new
   end
 
+  # A helper class for finding configuration with ENV and presenting it
+  # in a concise way within the view. Using the helper method `env`, one
+  # can request the value of any environment variable through Dotenv by
+  # running its method like so:
+  #
+  #     env.segment_write_key
+  #
+  # They will then be able to view the `$SEGMENT_WRITE_KEY` from the
+  # environment within the view.
   class DotenvConfiguration
     def method_missing(method, *arguments)
       super unless respond_to? method
-      method_name = name_of(method)
-
-      case
-      when method =~ /\=\Z/
-        ENV[method_name] = arguments.first
-      when method =~ /\?\Z/
-        !!ENV[method_name]
-      when method =~ /\!\Z/
-        ENV[method_name] = true
-      else
-        ENV[method_name
-      end
+      get attr_name_for(method)
     end
 
     def respond_to?(method)
-      ENV[name_of(method)].present?
+      attr_exists?(method) || super
     end
 
     private
 
-    def name_of(method)
-      method.gsub(/=\Z/, '').downcase
+    def attr_exists?(method)
+      ENV[attr_name_for(method)].present?
+    end
+
+    def attr_name_for(method_name)
+      method_name.gsub(/=\Z/, '').downcase
+    end
+
+    def get(attribute)
+      if attribute =~ /\?\Z/
+        !!ENV[name]
+      else
+        ENV[name]
+      end
     end
   end
 end

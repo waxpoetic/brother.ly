@@ -2,29 +2,24 @@ require 'ostruct'
 require 'sanitize'
 require 'digest/md5'
 
+# Helper methods for the Casper stuff within this project as well as
+# titles.
 module MiddlemanCasperHelpers
   def page_articles
     []
   end
 
-  def is_blog_article?
+  def blog_article?
     false
   end
 
   def page_title
-    title = blog_settings.name.dup
-    if is_tag_page?
-      title << ": #{current_resource.metadata[:locals]['tagname']}"
-    elsif current_page.data.title
-      title << ": #{current_page.data.title}"
-    elsif is_blog_article?
-      title << ": #{current_article.title}"
-    end
-    title
+    return default_title unless current_page_title.present?
+    [default_title, current_page_title].join(': ')
   end
 
   def page_description
-    if is_blog_article?
+    if blog_article?
       Sanitize.fragment(current_article.summary(150, '')).strip.gsub(/\s+/, ' ')
     else
       blog_settings.description
@@ -32,7 +27,7 @@ module MiddlemanCasperHelpers
   end
 
   def page_class
-    if is_blog_article? || current_page.data.layout == 'page'
+    if blog_article? || current_page.data.layout == 'page'
       'post-template'
     elsif current_resource.metadata[:locals]['page_number'].to_i > 1
       'archive-template'
@@ -54,12 +49,14 @@ module MiddlemanCasperHelpers
     OpenStruct.new(casper[:blog])
   end
 
-  def is_tag_page?
+  def tag_page?
     current_resource.metadata[:locals]['page_type'] == 'tag'
   end
+
   def tags?(article = current_article)
     article.tags.present?
   end
+
   def tags(article = current_article, separator = ', ')
     capture_haml do
       article.tags.each do |tag|
@@ -80,6 +77,7 @@ module MiddlemanCasperHelpers
       { class: 'no-cover' }
     end
   end
+
   def cover?
     current_page.data.cover.present?
   end
@@ -88,6 +86,7 @@ module MiddlemanCasperHelpers
     md5 = Digest::MD5.hexdigest(blog_author.gravatar_email.downcase)
     "https://www.gravatar.com/avatar/#{md5}?size=#{size}"
   end
+
   def gravatar?
     blog_author.gravatar_email.present?
   end
@@ -96,24 +95,54 @@ module MiddlemanCasperHelpers
     "https://twitter.com/share?text=#{current_article.title}" \
       "&amp;url=#{current_article_url}"
   end
+
   def facebook_url
     "https://www.facebook.com/sharer/sharer.php?u=#{current_article_url}"
   end
+
   def google_plus_url
     "https://plus.google.com/share?url=#{current_article_url}"
   end
 
+  def current_page_url
+    "#{current_page.url}"
+  end
+
   def feed_path
     if is_tag_page?
-      "#{current_page.url.to_s}feed.xml"
+      "#{current_page_url}feed.xml"
     else
-      "/feed.xml"
+      '/feed.xml'
     end
   end
+
   def home_path
-    "/"
+    '/'
   end
+
   def author_path
     "/author/#{blog_author.name.parameterize}/"
+  end
+
+  private
+
+  def default_title
+    blog_settings.name
+  end
+
+  def current_page_title
+    tag_page_title || article_page_title || custom_page_title
+  end
+
+  def tag_page_title
+    current_resource.metadata[:locals]['tagname'] if tag_page?
+  end
+
+  def article_page_title
+    current_page.data.title if blog_article?
+  end
+
+  def custom_page_title
+    current_page.data.title
   end
 end

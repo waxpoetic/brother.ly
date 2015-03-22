@@ -5,13 +5,16 @@ source 'http://rubygems.org'
 gem 'middleman', '~> 3.3.10'
 gem 'middleman-livereload', '~> 3.4.2'
 gem 'middleman-s3_sync'
-gem 'middleman-syntax', '~> 2.0.0'
-gem 'redcarpet', '~> 3.2.2'
-gem 'nokogiri', '~> 1.6.6.2'
-gem 'sanitize', '~> 3.1.2'
-gem 'travis'
 gem 'middleman-dotenv'
 gem 'middleman-cloudfront'
+
+group :development do
+  gem 'travis'
+end
+
+group :test do
+  gem 'rubocop'
+end
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-jquery'

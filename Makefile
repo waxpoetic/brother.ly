@@ -21,4 +21,5 @@ deploy: build
 	bundle exec middleman s3_sync
 
 test:
+	bundle exec rubocop
 	bundle exec middleman server

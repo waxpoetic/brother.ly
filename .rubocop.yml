@@ -1,0 +1,3 @@
+# We need double negation in order to convert to boolean.
+Style/DoubleNegation:
+  Enabled: false
