@@ -12,7 +12,7 @@ clean:
 	rm -rf build
 
 build: clean
-	bundle exec middleman build
+	bundle exec middleman build --verbose
 
 deploy: build
 	bundle exec middleman s3_sync
