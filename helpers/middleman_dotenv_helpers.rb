@@ -36,9 +36,9 @@ module MiddlemanDotenvHelpers
 
     def get(attribute)
       if attribute =~ /\?\Z/
-        !!ENV[name]
+        !!ENV[attribute]
       else
-        ENV[name]
+        ENV[attribute]
       end
     end
   end
