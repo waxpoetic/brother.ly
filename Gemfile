@@ -3,12 +3,12 @@
 source 'http://rubygems.org'
 
 gem 'middleman', '~> 3.3.10'
-gem 'middleman-livereload', '~> 3.4.2'
 gem 'middleman-dotenv'
 gem 'middleman-cloudfront'
 
 group :development do
   gem 'travis'
+  gem 'middleman-livereload', '~> 3.4.2'
 end
 
 group :test do
