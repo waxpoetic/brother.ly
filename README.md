@@ -18,7 +18,7 @@ static HTML site:
 ```bash
 $ git clone git://github.com/waxpoetic/brother.ly.git
 $ cd brother.ly
-$ make
+$ bundle && make
 ```
 
 ## Deployment

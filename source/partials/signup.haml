@@ -1,0 +1,13 @@
+%form#sign-up-form{ method: 'post', action: '?' }
+  .field
+    %label{ for: 'name' } Name
+    %input{ type: 'text', name: 'name' }
+  .field
+    %label{ for: 'email' } E-Mail Address
+    %input{ type: 'email', name: 'email' }
+  .controls
+    %input{ type: 'submit', value: 'RSVP to Attend' }
+#thank-you-message
+  %p
+    Thank you for signing up. We will email you when the party starts
+    and its location momentarily.

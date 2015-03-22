@@ -2,39 +2,28 @@
 pageable: true
 per_page: 6
 cover: blurred.jpg
+open_signups: false
+youtube: https://www.youtube.com/channel/UCXAX6k7RUqAVWSG0YMYOmqw
+twitter: https://twitter.com/brotherlyparty
 ---
 
 %header.main-header{cover}
   %nav.main-nav.overlay.clearfix
     /%a.blog-logo{href: home_path}= image_tag 'logo.png', alt: 'brother.ly'
     %section.buttons
-      /%a.subscribe-button.icon-stats{href: '#watch'} Watch
       %a.subscribe-button.icon-feed{href: '#transmission'} Next Transmission
-      /%a.subscribe-button.icon-feed{href: '/feed.xml'} Subscribe
-      /%a.subscribe-button.icon-feed{href: 'https://twitter.com/brotherlyparty'} Follow
+      %a.subscribe-button.icon-feed{href: current_page.data.youtube} Subscribe
+      %a.subscribe-button.icon-twitter{href: current_page.data.twitter} Follow
   .vertical
     .main-header-content.inner
+
       %h1.page-title brother.ly
       %h2.page-description
-        a private, intimate showcase of
+        coming soon... a private, intimate showcase of
         philadelphia's live electronic music scene
-      %h2.page-description
-        %br
-        coming soon...
-      - if env.open_signups?
-        #thank-you-message
-          %p
-            Thank you for signing up. We will email you when the party starts
-            and its location momentarily.
-        %form#sign-up-form{ method: 'post', action: '?' }
-          .field
-            %label{ for: 'name' } Name
-            %input{ type: 'text', name: 'name' }
-          .field
-            %label{ for: 'email' } E-Mail Address
-            %input{ type: 'email', name: 'email' }
-          .controls
-            %input{ type: 'submit', value: 'RSVP to Attend' }
+
+      = partial :signup if current_page.data.open_signups
+
   %a.scroll-down.icon-arrow-left{href: '#content', data: {offset: '-45'}}
     %span.hidden Scroll Down
 

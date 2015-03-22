@@ -11,10 +11,7 @@ all: build
 clean:
 	rm -rf build
 
-vendor/bundle:
-	bundle install --quiet
-
-build: vendor/bundle clean
+build: clean
 	bundle exec middleman build
 
 deploy: build
