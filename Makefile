@@ -4,9 +4,12 @@
 
 SHELL = /bin/bash
 
-.PHONY: clean build deploy test check server all
+.PHONY: config clean build deploy test check server all
 
 all: build
+
+config:
+	cp .env.development .env
 
 clean:
 	rm -rf build
