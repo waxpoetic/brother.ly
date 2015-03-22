@@ -2,7 +2,7 @@ GEM
   remote: http://rubygems.org/
   remote: https://rails-assets.org/
   specs:
-    CFPropertyList (2.3.0)
+    CFPropertyList (2.3.1)
     activesupport (4.1.10)
       i18n (~> 0.6, >= 0.6.9)
       json (~> 1.7, >= 1.7.7)
@@ -195,9 +195,9 @@ GEM
       em-websocket (~> 0.5.1)
       middleman-core (>= 3.3)
       rack-livereload (~> 0.3.15)
-    middleman-s3_sync (3.0.42)
+    middleman-s3_sync (3.0.43)
       ansi (~> 1.5.0)
-      fog (>= 1.25.0)
+      fog-aws (>= 0.1.1)
       map
       middleman-core (>= 3.0.0)
       pmap
