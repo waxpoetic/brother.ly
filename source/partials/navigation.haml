@@ -1,7 +1,11 @@
 %nav.main-nav.overlay.clearfix
   /%a.blog-logo{href: home_path}= image_tag 'logo.png', alt: 'brother.ly'
   %section.buttons
-    %a.subscribe-button.icon-location{href: '#transmission'} Next Transmission
-    %a.subscribe-button.icon-feed{href: env.youtube_link, target: '_blank'} Subscribe
-    %a.subscribe-button.icon-twitter{href: env.twitter_link, target: '_blank'} Follow
-    %a.subscribe-button.icon-facebook{href: env.facebook_link, target: '_blank'} Like
+    %a.icon-location{href: '#transmission'}
+      Next Transmission
+    %a.icon-feed{href: 'https://www.youtube.com/channel/UCXAX6k7RUqAVWSG0YMYOmqw', target: '_blank'}
+      Subscribe
+    %a.icon-twitter{href: 'https://twitter.com/brotherlyparty', target: '_blank'}
+      Follow
+    %a.icon-facebook{href: 'https://facebook.com/brotherlyparty', target: '_blank'}
+      Like
