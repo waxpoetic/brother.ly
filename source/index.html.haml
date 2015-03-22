@@ -1,6 +1,7 @@
 ---
 cover: blurred.jpg
 open_signups: false
+live_event: false
 ---
 
 %header.main-header{cover}
@@ -15,6 +16,8 @@ open_signups: false
 
       - if current_page.data.open_signups
         = partial :signup
+      - elsif current_page.data.live_event
+        / embed youtube code for live event
       - else
         %h2.page-description#signups-closed coming soon...
 
