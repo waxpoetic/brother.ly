@@ -1,6 +1,6 @@
 language: ruby
 cache: bundler
-bundler_args: --without development
+bundler_args: --without development --deployment
 env:
   global:
   - secure: mEhShAd+tkXRD5NA3S1ux+m2MFpZ1tqGAzFY1qOPJ84uVJNVhB6Gq2jXjha4ML/o9EZ/lVgVFLoUFhnWinJ3W2H5QiLecIHuVONSguZEE/TJAPicFY0LrTioa/UhgaWXJjopcHlv2KtBenMi840CkvZ1fVnM+vbqx67mUS+aRNQ=
