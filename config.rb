@@ -91,26 +91,26 @@ configure :build do
 end
 
 # Deploy to Amazon S3
-activate :s3_sync do |s3_sync|
-  s3_sync.bucket                     = 'brother.ly'
-  s3_sync.region                     = ENV['AWS_DEFAULT_REGION']
-  s3_sync.aws_access_key_id          = ENV['AWS_ACCESS_KEY_ID']
-  s3_sync.aws_secret_access_key      = ENV['AWS_SECRET_ACCESS_KEY']
-  s3_sync.delete                     = false
-  s3_sync.after_build                = false
-  s3_sync.prefer_gzip                = true
-  s3_sync.path_style                 = true
-  s3_sync.reduced_redundancy_storage = false
-  s3_sync.acl                        = 'public-read'
-  s3_sync.encryption                 = false
-  s3_sync.prefix                     = ''
-  s3_sync.version_bucket             = false
-end
+# activate :s3_sync do |s3_sync|
+#   s3_sync.bucket                     = 'brother.ly'
+#   s3_sync.region                     = ENV['AWS_DEFAULT_REGION']
+#   s3_sync.aws_access_key_id          = ENV['AWS_ACCESS_KEY_ID']
+#   s3_sync.aws_secret_access_key      = ENV['AWS_SECRET_ACCESS_KEY']
+#   s3_sync.delete                     = false
+#   s3_sync.after_build                = false
+#   s3_sync.prefer_gzip                = true
+#   s3_sync.path_style                 = true
+#   s3_sync.reduced_redundancy_storage = false
+#   s3_sync.acl                        = 'public-read'
+#   s3_sync.encryption                 = false
+#   s3_sync.prefix                     = ''
+#   s3_sync.version_bucket             = false
+# end
 
 # Invalidate CloudFront CDN caches when building
 activate :cloudfront do |cf|
   cf.access_key_id = ENV['AWS_ACCESS_KEY_ID']
   cf.secret_access_key = ENV['AWS_SECRET_ACCESS_KEY']
   cf.distribution_id = ENV['AWS_CLOUDFRONT_DISTRO_ID']
-  cf.after_build = false
+  cf.after_build = ENV['CI']
 end
