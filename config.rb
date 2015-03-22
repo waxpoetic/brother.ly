@@ -130,3 +130,14 @@ set :file_watcher_ignore, [
   /(^|\/)\.?#/,
   /^tmp\//
 ]
+
+# Page title helpers
+activate :title do |config|
+  config.title = data.site.title
+  config.separator = ' | '
+end
+
+# Auto-prefix CSS rules
+activate :autoprefixer do |config|
+  config.browsers = ['last 2 versions', 'Explorer >= 9']
+end

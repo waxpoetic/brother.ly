@@ -8,10 +8,12 @@ gem 'middleman-cloudfront'
 gem 'middleman-search_engine_sitemap'
 gem 'middleman-meta-tags'
 gem 'middleman-title'
+gem 'middleman-autoprefixer'
 
 group :development do
   gem 'travis'
   gem 'middleman-livereload', '~> 3.4.2'
+  gem 'middleman-pry'
 end
 
 group :test do

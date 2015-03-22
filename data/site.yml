@@ -1,11 +1,17 @@
 # SEO settings
-title: brother.ly
+site: brother.ly
 description: a private, intimate showcase of philadelphia's live electronic music scene
 url: http://brother.ly
 keywords: philadelphia, live, electronic, music, streaming, video, party
+twitter_card: summary
 twitter_author: brotherlyparty
 publisher_twitter: http://brother.ly
 
 # View settings
 open_signups: false
 live_event: false
+
+# Social media links
+youtube_url: https://www.youtube.com/channel/UCXAX6k7RUqAVWSG0YMYOmqw
+twitter_url: https://twitter.com/brotherlyparty
+facebook_url: https://facebook.com/brotherlyparty
