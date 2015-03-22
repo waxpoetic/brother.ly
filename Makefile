@@ -23,4 +23,4 @@ check:
 server:
 	bundle exec middleman server
 
-test: check server
+test: check build

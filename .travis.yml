@@ -1,7 +1,7 @@
 language: ruby
 cache: bundler
 before_install: gem update bundler
-script: make
+script: make test
 deploy:
   provider: s3
   bucket: brother.ly
