@@ -69,25 +69,10 @@ activate :livereload
 # Pretty URLs - http://middlemanapp.com/basics/pretty-urls/
 activate :directory_indexes
 
-# Middleman-Syntax - https://github.com/middleman/middleman-syntax
-set :haml, ugly: true
-set :markdown_engine, :redcarpet
-set :markdown, fenced_code_blocks: true, smartypants: true
-activate :syntax, line_numbers: true
-
-# Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
-
+# Directory settings
 set :css_dir, 'stylesheets'
-
 set :js_dir, 'javascripts'
-
 set :images_dir, 'images'
-
 set :partials_dir, 'partials'
 
 # Build-specific configuration

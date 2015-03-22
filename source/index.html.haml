@@ -1,10 +1,6 @@
 ---
-pageable: true
-per_page: 6
 cover: blurred.jpg
 open_signups: false
-youtube: https://www.youtube.com/channel/UCXAX6k7RUqAVWSG0YMYOmqw
-twitter: https://twitter.com/brotherlyparty
 ---
 
 %header.main-header{cover}
@@ -13,11 +9,14 @@ twitter: https://twitter.com/brotherlyparty
     .main-header-content.inner
 
       %h1.page-title brother.ly
-      %h2.page-description
-        coming soon... a private, intimate showcase of
+      %h2.page-description#slogan
+        a private, intimate showcase of
         philadelphia's live electronic music scene
 
-      = partial :signup if current_page.data.open_signups
+      - if current_page.data.open_signups
+        = partial :signup
+      - else
+        %h2.page-description#signups-closed coming soon...
 
   %a.scroll-down.icon-arrow-left{href: '#content', data: {offset: '-45'}}
     %span.hidden Scroll Down

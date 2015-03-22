@@ -1,5 +1,4 @@
 require 'ostruct'
-require 'sanitize'
 require 'digest/md5'
 
 # Helper methods for the Casper stuff within this project as well as
@@ -19,11 +18,7 @@ module MiddlemanCasperHelpers
   end
 
   def page_description
-    if blog_article?
-      Sanitize.fragment(current_article.summary(150, '')).strip.gsub(/\s+/, ' ')
-    else
-      blog_settings.description
-    end
+    blog_settings.description
   end
 
   def page_class

@@ -27,11 +27,15 @@ module MiddlemanDotenvHelpers
     private
 
     def attr_exists?(method)
-      ENV[attr_name_for(method)].present?
+      ENV[env_name_for(method)].present?
+    end
+
+    def env_name_for(method)
+      method.to_s.upcase
     end
 
     def attr_name_for(method_name)
-      method_name.gsub(/=\Z/, '').downcase
+      env_name_for method_name.to_s.gsub(/=\Z/, '').downcase
     end
 
     def get(attribute)
