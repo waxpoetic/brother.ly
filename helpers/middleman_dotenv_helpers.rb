@@ -1,3 +1,4 @@
+require 'dotenv'
 
 # Support for dotenv configuration within the view.
 module MiddlemanDotenvHelpers
@@ -15,6 +16,10 @@ module MiddlemanDotenvHelpers
   # They will then be able to view the `$SEGMENT_WRITE_KEY` from the
   # environment within the view.
   class DotenvConfiguration
+    def initialize
+      Dotenv.load
+    end
+
     def method_missing(method, *arguments)
       super unless respond_to? method
       get attr_name_for(method)
@@ -27,7 +32,7 @@ module MiddlemanDotenvHelpers
     private
 
     def attr_exists?(method)
-      ENV[env_name_for(method)].present?
+      !ENV[env_name_for(method)].nil?
     end
 
     def env_name_for(method)

@@ -1,12 +1,12 @@
 #= require jquery
 
 jQuery ->
-  $('#sign-up-form').on 'submit', ->
+  $('#mc-embedded-subscribe-form').on 'submit', (event) ->
     analytics.track 'Sign Up',
-      name: $('input[name="name"]').val()
-      email: $('input[name="email"]').val()
-    $(this).slideUp 150
-    $('#thank-you-message').slideDown 150
+      name: $('input[name="mce-NAME"]').val()
+      email: $('input[name="mce-EMAIL"]').val()
+    $('#mc_embed_signup_scroll').fadeOut 250, ->
+      $('#thank-you-message').show()
 
   $('.buttons a').on 'click', ->
     analytics.track 'Clicked Link',

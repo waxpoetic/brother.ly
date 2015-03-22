@@ -92,8 +92,12 @@ nav {
   top: 25px;
 }
 
+#splash {
+  position: relative;
+  min-height: 500px;
+}
 
-#sign-up-form {
+#mc-embedded-subscribe-form {
   @extend .page-description;
   text-align: left;
   font-size: 2rem;
@@ -104,22 +108,40 @@ nav {
   top: 20px;
 }
 
+#thank-you-message {
+  @extend #mc-embedded-subscribe-form;
+
+  display: none;
+  max-width: 241px;
+  min-height: 302px;
+
+  p {
+    &.long {
+      padding: 15px;
+    }
+
+    &.short {
+      text-align: center;
+    }
+  }
+}
+
 form  {
   display: table;
 }
 form p     { display: table-row;  }
 form label, form input { display: table-cell; }
-form .field {
+form .mc-field-group {
   margin-bottom: 10px;
 }
-form .controls {
+form .clear {
   margin: 27px 0;
   text-align: center;
 }
-form .controls input[type="submit"] {
+form .clear input[type="submit"] {
   padding: 15px;
 }
-form .field input {
+form .mc-field-group input {
   width: 98%;
   font-family: "Open Sans", sans-serif;
   background: transparent;
@@ -128,10 +150,12 @@ form .field input {
   color: white;
 }
 
+form fieldset {
+  border: 0;
+}
+
 .page-title {
   text-shadow: 2px 2px #222;
 }
 
-#thank-you-message {
-  display: none;
-}
+
