@@ -132,10 +132,7 @@ set :file_watcher_ignore, [
 ]
 
 # Page title helpers
-activate :title do |config|
-  config.title = data.site.title
-  config.separator = ' | '
-end
+activate :title, title: data.site.title, separator: ' | '
 
 # Auto-prefix CSS rules
 activate :autoprefixer do |config|
