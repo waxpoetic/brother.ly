@@ -13,6 +13,9 @@ GEM
     ast (2.0.0)
     astrolabe (1.3.0)
       parser (>= 2.2.0.pre.3, < 3.0)
+    autoprefixer-rails (5.1.7.1)
+      execjs
+      json
     backports (3.6.4)
     builder (3.2.2)
     celluloid (0.16.0)
@@ -171,6 +174,9 @@ GEM
       middleman-sprockets (>= 3.1.2)
       sass (>= 3.4.0, < 4.0)
       uglifier (~> 2.5)
+    middleman-autoprefixer (2.4.3)
+      autoprefixer-rails (~> 5.1.3)
+      middleman-core (>= 3.3.3)
     middleman-cloudfront (0.1.1)
       fog (~> 1.9)
       middleman-core (~> 3.0)
@@ -195,6 +201,9 @@ GEM
       rack-livereload (~> 0.3.15)
     middleman-meta-tags (0.1.2)
       middleman-core (>= 3.0.0)
+    middleman-pry (0.0.4)
+      middleman-core (~> 3.2)
+      pry (~> 0.9)
     middleman-search_engine_sitemap (1.3.0)
       builder
       middleman-core (~> 3.2)
@@ -294,10 +303,12 @@ PLATFORMS
 
 DEPENDENCIES
   middleman (~> 3.3.10)
+  middleman-autoprefixer
   middleman-cloudfront
   middleman-dotenv
   middleman-livereload (~> 3.4.2)
   middleman-meta-tags
+  middleman-pry
   middleman-search_engine_sitemap
   middleman-title
   rails-assets-jquery!
