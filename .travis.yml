@@ -2,7 +2,6 @@ language: ruby
 cache: bundler
 env:
   global:
-  - CI=true
   - secure: mEhShAd+tkXRD5NA3S1ux+m2MFpZ1tqGAzFY1qOPJ84uVJNVhB6Gq2jXjha4ML/o9EZ/lVgVFLoUFhnWinJ3W2H5QiLecIHuVONSguZEE/TJAPicFY0LrTioa/UhgaWXJjopcHlv2KtBenMi840CkvZ1fVnM+vbqx67mUS+aRNQ=
   - secure: KngqjKtmrjoVnP3l6tU65zm5i3EmZ92IXjltsTUAXwm7eHcQh2gwqbp/dpTkumX5u8hBpQFVpblcmWoiD8EdhO27qjc/ZSjyThiIm0G5zKvzbOru6qUHVlrZNncsBlT20ZI8O0XB3YG0NOU9MGovYlPKbC/6TZGocxzOvRUEqY4=
   - secure: cWT0gPKyu/kU5HmFW/x5gSM41tfv9qmmn69KZ0NhLjjmZOch3ARYFpWPywRrrWowIl4QnS5k8cj2aW9FpPNbEuOJW4gdO9kgqEWI8kOKZXKQgjOpA2LuGQy2UOiOrfQADNrAJ4C+DCPqJH43cSSK3EHcRH9hczEyigL/yj3KIbw=
