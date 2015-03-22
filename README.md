@@ -1,55 +1,57 @@
 # brother.ly
 
+The official website for [Wax Poetic Records][waxpoetic]' late-night
+intimate streaming events. Every month, we select the best producers of
+Philadelphia's booming electronic music scene and showcase their latest
+and greatest work in an ultra-private setting. The location is never
+publicly announced, and 
+
 The official website for Wax Poetic's ultra-intimate streaming events.
+It's hosted by Amazon S3 and distributed by Amazon CloudFront for fast
+access. 
 
 ## Installation
 
-Clone this repo:
+Clone this repo and run the Makefile to build the entire project into a
+static HTML site:
 
 ```bash
 $ git clone git://github.com/waxpoetic/brother.ly.git
 $ cd brother.ly
-```
-
-Install dependencies:
-
-```bash
-$ gem install bundler
-$ bundle install
-```
-
-Build the project:
-
-```bash
 $ make
 ```
 
-## Usage
-
-You can also run `./bin/brotherly` to start the development server.
-
 ## Deployment
 
-Configure your settings:
+We host http://brother.ly on Amazon Web Services, originating the files
+from S3 and utilizing the CloudFront CDN for speed. In order to use the
+deployment command, you need to have certain environment variables set.
+For security reasons, these environment variables do not come packaged
+with the codebase:
 
 ```bash
-$ cp .env.example .env
+$ export AWS_ACCESS_KEY_ID='your-iam-users-access-key'
+$ export AWS_SECRET_ACCESS_KEY='your-iam-users-secret-key'
+$ export AWS_S3_BUCKET_NAME='by-default-this-is-brother.ly'
+$ export AWS_CDN_DISTRO_ID='find-this-on-the-cloudfront-page'
+```
+
+Alternatively, you can use the built-in dotenv support:
+
+```bash
+$ cp .env.development .env
 $ vi .env
 ```
 
-Then run this command to deploy:
+It will automatically be picked up by middleman and inserted into the
+app.
+
+Once those environment variables are set, go ahead and run the
+deployment command:
 
 ```bash
 $ make deploy
 ```
-
-## Contributing
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new [Pull Request](../../pull/new/master)
 
 ## License
 
