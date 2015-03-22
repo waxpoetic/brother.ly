@@ -4,8 +4,8 @@ The official website for [Wax Poetic Records][waxpoetic]' late-night
 intimate streaming events. Every month, we select the best producers of
 Philadelphia's booming electronic music scene and showcase their latest
 and greatest work in an ultra-private setting. The location is never
-publicly announced, but anyone can experience the event by visiting
-http://brother.ly, where we'll be streaming the event live on YouTube.
+publicly announced, but anyone can experience a live stream of the event by visiting
+http://brother.ly.
 
 ## Installation
 
