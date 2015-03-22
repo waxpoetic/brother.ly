@@ -17,9 +17,6 @@ clean:
 build: clean
 	bundle exec middleman build --verbose
 
-deploy: build
-	bundle exec middleman s3_sync
-
 check:
 	bundle exec rubocop
 
