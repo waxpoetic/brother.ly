@@ -1,3 +1,4 @@
+# Retrieves items from the middleman site data.
 module DataHelper
   def site_title
     data.site.title || data.site.site

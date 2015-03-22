@@ -1,3 +1,4 @@
+# Supports cover images behind the site header.
 module CoverImageHelper
   def cover
     if cover_image_exists?
