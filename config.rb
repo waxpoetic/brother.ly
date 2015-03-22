@@ -126,7 +126,7 @@ activate :search_engine_sitemap
 set :file_watcher_ignore, [
   /^bin(\/|$)/,
   /^\.bundle(\/|$)/,
-  #/^vendor(\/|$)/,
+  # /^vendor(\/|$)/,
   /^node_modules(\/|$)/,
   /^\.sass-cache(\/|$)/,
   /^\.cache(\/|$)/,
