@@ -4,7 +4,7 @@
 
 SHELL = /bin/bash
 
-.PHONY: clean build deploy test all
+.PHONY: clean build deploy test check server all
 
 all: build
 
@@ -17,6 +17,10 @@ build: clean
 deploy: build
 	bundle exec middleman s3_sync
 
-test:
+check:
 	bundle exec rubocop
+
+server:
 	bundle exec middleman server
+
+test: check server
