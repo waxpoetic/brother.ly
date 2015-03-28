@@ -8,6 +8,7 @@ env:
   - secure: hMaQe2QeLQcHrOoHLi62ng4+DBVz41blMEmzImOSOGXMw4CzwQ9V/IYBQEMnP7u8pnz9stCLMQLYD6FRJ+pJsZDPW/ACINPlpVUbJwVdFcYebkA4tplcmI9uz1RdVUeeaX7eJOho+8vZ/agyC8otSEVDBSfcpsClnx4I47Ijr/g=
 before_install: gem update bundler
 script: make test
+after_success: make build
 deploy:
   provider: s3
   bucket: brother.ly

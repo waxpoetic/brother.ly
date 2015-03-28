@@ -18,9 +18,10 @@ clean:
 	rm -rf build
 
 build: vendor/bundle clean
-	bundle exec middleman build
+	bundle exec middleman build --verbose
 
-check:
+check: vendor/bundle
 	bundle exec rubocop
 
-test: check build
+test: check
+	bundle exec rspec
