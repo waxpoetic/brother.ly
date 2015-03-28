@@ -18,6 +18,9 @@ end
 
 group :test do
   gem 'rubocop'
+  gem 'rspec'
+  gem 'capybara'
+  gem 'poltergeist'
 end
 
 source 'https://rails-assets.org' do
