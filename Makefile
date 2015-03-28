@@ -4,12 +4,12 @@
 
 SHELL = /bin/bash
 
-.PHONY: config clean build deploy test check server all
+.PHONY: build config clean check test watch vendor/bundle all
 
 all: build
 
-vendor/bundle:
-	bundle install --path=vendor/bundle --quiet
+build: vendor/bundle clean
+	bundle exec middleman build --verbose
 
 config:
 	cp .env.development .env
@@ -17,11 +17,14 @@ config:
 clean:
 	rm -rf build
 
-build: vendor/bundle clean
-	bundle exec middleman build --verbose
-
 check: vendor/bundle
 	bundle exec rubocop
 
 test: check
 	bundle exec rspec
+
+watch:
+	bundle exec middleman server
+
+vendor/bundle:
+	bundle install --path=vendor/bundle --quiet
