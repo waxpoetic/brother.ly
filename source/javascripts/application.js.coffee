@@ -1,12 +1,11 @@
 #= require jquery
+#= require fake_analytics
 
 jQuery ->
-  $signup = $('#mc-embedded-subscribe-form')
-  signup = $signup[0]
-  analytics.trackForm signup, 'Signed Up'
-  $signup.on 'submit', ->
-    $('#mc_embed_signup_scroll').fadeOut 250, ->
-      $('#thank-you-message').show()
+  analytics.page $('meta[name="page-name"]').attr('content')
 
-  $('.buttons a').each (i, element) ->
-    analytics.trackLink element, 'Clicked Link'
+  $('#mc-embedded-subscribe-form').on 'submit', (event) ->
+    analytics.trackForm event.currentTarget, 'Signed Up'
+
+  $('.buttons a').on 'click', (event) ->
+    analytics.trackLink event.currentTarget, 'Clicked Link'
