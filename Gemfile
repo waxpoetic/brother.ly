@@ -25,5 +25,5 @@ end
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-jquery'
-  gem 'rails-assets-jquery.sticky'
+  gem 'rails-assets-font-awesome'
 end

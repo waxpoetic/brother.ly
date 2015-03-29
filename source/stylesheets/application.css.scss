@@ -1,3 +1,4 @@
+@import 'font-awesome';
 @import 'vendor/casper';
 
 body {
@@ -24,6 +25,7 @@ nav {
 
 #content section {
   min-height: 1000px;
+  max-height: 2100px;
 
   .body {
     padding: 15%;
@@ -161,4 +163,40 @@ form fieldset {
 
 .buttons a {
   @extend .subscribe-button;
+}
+
+ul.artists {
+  list-style: none;
+
+  li {
+    .arrow {
+      display: inline-block;
+      transform: rotate(-90deg);
+      margin-right: 10px;
+
+      &.clicked {
+        transform: rotate(90deg);
+      }
+    }
+
+    a {
+      text-decoration: none;
+      padding: 5px;
+      border-radius: 5px;
+
+      &:hover {
+        .arrow {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .bio {
+      display: none;
+      margin-left: 20px;
+      padding-top: 1.75em;
+      font-size: 14px;
+      max-width: 400px;
+    }
+  }
 }

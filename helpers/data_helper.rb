@@ -1,5 +1,10 @@
 # Retrieves items from the middleman site data.
 module DataHelper
+  def markdown(source)
+    source = "_Biography coming shortly..._" if source.blank?
+    Tilt['markdown'].new { source }.render
+  end
+
   def site_title
     data.site.title || data.site.site
   end

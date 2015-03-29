@@ -260,8 +260,8 @@ GEM
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
+    rails-assets-font-awesome (4.3.0)
     rails-assets-jquery (2.1.3)
-    rails-assets-jquery.sticky (1.0.0)
     rainbow (2.0.0)
     rb-fsevent (0.9.4)
     rb-inotify (0.9.5)
@@ -344,8 +344,8 @@ DEPENDENCIES
   middleman-search_engine_sitemap
   middleman-title
   poltergeist
+  rails-assets-font-awesome!
   rails-assets-jquery!
-  rails-assets-jquery.sticky!
   rspec
   rubocop
   travis

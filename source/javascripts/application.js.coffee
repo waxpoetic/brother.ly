@@ -9,3 +9,9 @@ jQuery ->
 
   $('.buttons a').on 'click', (event) ->
     analytics.trackLink event.currentTarget, 'Clicked Link'
+
+  $('.artists li > a').on 'click', (event) ->
+    event.preventDefault()
+    href = $(this).attr 'href'
+    $(href).find('.bio').slideToggle 150
+    $(this).find('i').toggleClass('clicked').css(transform: 'rotate(90deg)')
