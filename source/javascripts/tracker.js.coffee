@@ -1,6 +1,4 @@
 class Tracker
-  submission: (event) ->
-
   click: (event) ->
     analytics.trackLink event.currentTarget, 'Clicked Link',
       location: $(event.currentTarget).attr('href')
