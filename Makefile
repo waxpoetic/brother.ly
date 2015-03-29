@@ -6,7 +6,7 @@ SHELL = /bin/bash
 
 .PHONY: build config clean check test watch all
 
-all: build
+all: test build
 
 clean:
 	rm -rf build
