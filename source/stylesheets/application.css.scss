@@ -237,6 +237,12 @@ ul.artists {
         .arrow {
           transform: rotate(180deg);
         }
+
+        &.active {
+          .arrow {
+            transform: rotate(90deg);
+          }
+        }
       }
     }
 
