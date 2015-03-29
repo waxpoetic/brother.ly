@@ -37,13 +37,15 @@ nav {
 
   .body {
     padding: 15%;
+    min-width: 498px;
 
     @media only screen and (max-width: 640px) {
       padding: 0;
       min-width: 510px;
     }
-
-    min-width: 498px;
+    @media only screen and (max-width: 720px) {
+      min-width: 410px;
+    }
 
     h1, h2, h3, p, ul, li {
       color: white;
@@ -70,6 +72,14 @@ nav {
     background: rgba(0,0,0, 0.75);
     padding: 20px;
     max-width: 55%;
+
+    @media only screen and (max-width: 640px) {
+      max-width: 640px;
+    }
+    @media only screen and (max-width: 768px) {
+      max-width: 100%
+    }
+
 
     a {
       color: #ccc;
