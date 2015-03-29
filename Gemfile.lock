@@ -27,7 +27,6 @@ GEM
     celluloid (0.16.0)
       timers (~> 4.0.0)
     chunky_png (1.3.4)
-    cliver (0.3.2)
     coderay (1.1.0)
     coffee-script (2.3.0)
       coffee-script-source
@@ -242,11 +241,6 @@ GEM
       activesupport (>= 3.1)
     parser (2.2.0.3)
       ast (>= 1.1, < 3.0)
-    poltergeist (1.6.0)
-      capybara (~> 2.1)
-      cliver (~> 0.3.1)
-      multi_json (~> 1.0)
-      websocket-driver (>= 0.2.0)
     powerpack (0.1.0)
     pry (0.9.12.6)
       coderay (~> 1.0)
@@ -323,9 +317,6 @@ GEM
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     websocket (1.2.1)
-    websocket-driver (0.5.3)
-      websocket-extensions (>= 0.1.0)
-    websocket-extensions (0.1.2)
     xpath (2.0.0)
       nokogiri (~> 1.3)
 
@@ -343,7 +334,6 @@ DEPENDENCIES
   middleman-pry
   middleman-search_engine_sitemap
   middleman-title
-  poltergeist
   rails-assets-font-awesome!
   rails-assets-jquery!
   rspec

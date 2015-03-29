@@ -24,4 +24,9 @@ feature 'index page' do
   it 'includes the next transmission' do
     expect(page).to have_content('next transmission...')
   end
+
+  it 'toggles biography visibility for each artist when clicked' do
+    click_link 'the wonder bars'
+    expect(page.find('#the_wonder_bars .bio')).to be_visible
+  end
 end
