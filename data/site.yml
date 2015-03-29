@@ -1,4 +1,4 @@
-# SEO settings
+# Meta tags
 site: brother.ly
 description: a private, intimate showcase of philadelphia's live electronic music scene
 url: http://brother.ly
@@ -8,7 +8,11 @@ twitter_author: brotherlyparty
 publisher_twitter: http://brother.ly
 pull_image: http://brother.ly/images/header.jpg
 
-# View settings
+# Sitemap settings
+change_frequency: monthly
+priority: 1.0
+
+# Flags for enabling or disabling content
 open_signups: false
 live_event: false
 
