@@ -10,7 +10,7 @@ pull_image: http://brother.ly/images/header.jpg
 
 # Sitemap settings
 change_frequency: monthly
-priority: 1.0
+priority: 0.5
 
 # Flags for enabling or disabling content
 open_signups: false
