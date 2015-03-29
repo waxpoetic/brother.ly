@@ -1354,7 +1354,6 @@ body:not(.post-template) .post-title {
         padding: 15% 0;
     }
 
-    .scroll-down,
     .home-template .main-header:after { display: none; }
 
     .archive-template .main-header {

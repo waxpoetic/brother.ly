@@ -1,6 +1,14 @@
 @import 'font-awesome';
 @import 'vendor/casper';
 
+.scroll-down {
+  &:hover {
+    @media only screen and (max-width: 640px) {
+      animation: none;
+    }
+  }
+}
+
 body {
   background: #000;
 }
@@ -29,6 +37,11 @@ nav {
 
   .body {
     padding: 15%;
+
+    @media only screen and (max-width: 640px) {
+      padding: 0;
+      min-width: 510px;
+    }
 
     min-width: 498px;
 
@@ -88,6 +101,11 @@ nav {
 
 #slogan {
   text-shadow: 1px 1px #222;
+  // iphone 5
+  @media only screen and (max-width: 640px) {
+    font-size: 2.5rem;
+    line-height: 4.5rem;
+  }
 }
 
 #signups-closed {
@@ -98,6 +116,10 @@ nav {
 #splash {
   position: relative;
   min-height: 500px;
+
+  @media only screen and (max-width: 640px) {
+    min-height: 460px;
+  }
 }
 
 #mc-embedded-subscribe-form {
@@ -159,10 +181,25 @@ form fieldset {
 
 .page-title {
   text-shadow: 2px 2px #222;
+
+  @media only screen and (max-width: 640px) {
+    position: relative;
+    margin-top: 15px;
+  }
 }
 
 .buttons a {
   @extend .subscribe-button;
+
+  @media only screen and (max-width: 640px) {
+    padding: 0 5px;
+  }
+}
+
+.vertical {
+  @media only screen and (max-width: 640px) {
+    top: 25px;
+  }
 }
 
 ul.artists {
