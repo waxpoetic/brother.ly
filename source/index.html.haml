@@ -10,15 +10,14 @@ priority: 1.0
     #splash.main-header-content.inner
 
       %h1.page-title= site_title
-      %h2.page-description#slogan= site_description
 
       - if open_signups?
         = partial :signup
       - elsif live_event?
         <iframe id="stream" width="560" height="315" src="#{data.site.live_event_url}" frameborder="0" allowfullscreen></iframe>
       - else
-        %h2.page-description#signups-closed
-          check back on monday...
+        %h2.page-description#slogan= site_description
+        %h2.page-description#signups-closed= splash_text
 
   %a.scroll-down.icon-arrow-left{href: '#content', data: {offset: '-45'}}
     %span.hidden Scroll Down

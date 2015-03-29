@@ -8,12 +8,15 @@ twitter_author: brotherlyparty
 publisher_twitter: http://brother.ly
 pull_image: http://brother.ly/images/header.jpg
 
+# Configurable text to show when we don't want a form to be there.
+splash_text: check back on monday...
+
 # Sitemap settings
 change_frequency: monthly
 priority: 0.5
 
-# Flags for enabling or disabling content
-open_signups: false
+# Live event URL, re-enable this when the event is occurring to show
+# it on the index page.
 #live_event_url: https://www.youtube.com/embed/rsTwMllpWQA?rel=0
 
 # Social media links

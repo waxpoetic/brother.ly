@@ -18,7 +18,7 @@ module DataHelper
   end
 
   def open_signups?
-    !!data.site.open_signups
+    data.site.splash_text.present?
   end
 
   def live_event?
