@@ -1,27 +1,15 @@
 #= require jquery
 #= require fake_analytics
+#= require tracker
 
-jQuery ->
-  # Track page views
-  analytics.page $('meta[name="page-name"]').attr('content')
+$(document)
+  .on 'ready', track.pageView
 
-  # Track form submissions
-  signupForm = document.getElementById('mc-embedded-subscribe-form')
-  analytics.trackForm signupForm, 'Signed Up'
+$('#mc-embedded-subscribe-form')
+  .on 'submit', track.submission
 
-  # Track link clicks
-  $('.buttons a').each (i, element) ->
-    analytics.trackLink element, 'Clicked Link',
-      location: $(element).attr('href')
+$('nav .buttons a')
+  .on 'click', track.click
 
-  # Track artist bio reads
-  $('.artists li > a').each (i, element) ->
-    analytics.trackLink element, 'Read Artist Bio',
-      artist: $(element).attr('id')
-
-  # Slide-toggle artist bios
-  $('.artists li > a').on 'click', (event) ->
-    event.preventDefault()
-    $($(this).attr('href')).find('.bio').slideToggle 150
-    $(this).toggleClass('active')
-    false
+$('.artists li > a')
+  .on 'click', track.read
