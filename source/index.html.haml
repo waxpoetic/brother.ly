@@ -9,17 +9,17 @@ priority: 1.0
   .vertical
     #splash.main-header-content.inner
 
-      %h1.page-title= site_title
+      %h1.page-title= data.site.site
 
       - if open_signups?
         = partial :signup
       - elsif live_event?
         <iframe id="stream" width="560" height="315" src="#{data.site.live_event_url}" frameborder="0" allowfullscreen></iframe>
       - else
-        %h2.page-description#slogan= site_description
-        %h2.page-description#signups-closed= splash_text
+        %h2.page-description#slogan= data.site.description
+        %h2.page-description#signups-closed= data.site.splash_text
 
-  %a.scroll-down.icon-arrow-left{href: '#content', data: {offset: '-45'}}
+  %a.scroll-down.icon-arrow-left{href: '#transmission', data: {offset: '-45'}}
     %span.hidden Scroll Down
 
 %main#content.content{role: :main}
