@@ -14,7 +14,7 @@ priority: 0.5
 
 # Flags for enabling or disabling content
 open_signups: false
-live_event: false
+#live_event_url: https://www.youtube.com/embed/rsTwMllpWQA?rel=0
 
 # Social media links
 youtube_url: https://www.youtube.com/channel/UCXAX6k7RUqAVWSG0YMYOmqw

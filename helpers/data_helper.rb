@@ -22,7 +22,7 @@ module DataHelper
   end
 
   def live_event?
-    !!data.site.live_event
+    data.site.live_event_url.present?
   end
 
   def page_class

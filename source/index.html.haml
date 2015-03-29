@@ -15,9 +15,10 @@ priority: 1.0
       - if open_signups?
         = partial :signup
       - elsif live_event?
-        / embed youtube code for live event
+        <iframe id="stream" width="560" height="315" src="#{data.site.live_event_url}" frameborder="0" allowfullscreen></iframe>
       - else
-        %h2.page-description#signups-closed coming soon...
+        %h2.page-description#signups-closed
+          check back on monday...
 
   %a.scroll-down.icon-arrow-left{href: '#content', data: {offset: '-45'}}
     %span.hidden Scroll Down
