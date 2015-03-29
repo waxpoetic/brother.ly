@@ -169,20 +169,23 @@ ul.artists {
   list-style: none;
 
   li {
-    .arrow {
-      display: inline-block;
-      transform: rotate(-90deg);
-      margin-right: 10px;
-
-      &.clicked {
-        transform: rotate(90deg);
-      }
-    }
 
     a {
       text-decoration: none;
       padding: 5px;
       border-radius: 5px;
+
+      .arrow {
+        display: inline-block;
+        margin-right: 10px;
+        transform: rotate(-90deg);
+      }
+
+      &.active {
+        .arrow {
+          transform: rotate(90deg);
+        }
+      }
 
       &:hover {
         .arrow {

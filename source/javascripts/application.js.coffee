@@ -12,6 +12,6 @@ jQuery ->
 
   $('.artists li > a').on 'click', (event) ->
     event.preventDefault()
-    href = $(this).attr 'href'
-    $(href).find('.bio').slideToggle 150
-    $(this).find('i').toggleClass('clicked').css(transform: 'rotate(90deg)')
+    $($(this).attr('href')).find('.bio').slideToggle 150
+    $(this).toggleClass('active')
+    false
