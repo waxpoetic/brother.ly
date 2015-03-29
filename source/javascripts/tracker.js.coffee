@@ -1,8 +1,5 @@
 class Tracker
   submission: (event) ->
-    analytics.trackForm event.currentTarget, 'Signed Up',
-      name: name
-      email: email
 
   click: (event) ->
     analytics.trackLink event.currentTarget, 'Clicked Link',

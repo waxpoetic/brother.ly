@@ -22,4 +22,5 @@ end
 source 'https://rails-assets.org' do
   gem 'rails-assets-jquery'
   gem 'rails-assets-font-awesome'
+  gem 'rails-assets-ajaxchimp'
 end

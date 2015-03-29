@@ -148,15 +148,10 @@ nav {
   display: none;
   max-width: 241px;
   min-height: 302px;
+  text-align: center;
 
   p {
-    &.long {
-      padding: 15px;
-    }
-
-    &.short {
-      text-align: center;
-    }
+    font-size: 1.8rem;
   }
 }
 
