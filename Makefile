@@ -18,7 +18,7 @@ build: vendor/bundle clean
 	bundle exec middleman build --verbose
 
 test: vendor/bundle check
-	bundle exec rspec
+	bundle exec rspec --format=documentation
 
 config:
 	cp .env.development .env
