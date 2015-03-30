@@ -9,7 +9,7 @@ publisher_twitter: http://brother.ly
 pull_image: http://brother.ly/images/header.jpg
 
 # Configurable text to show when we don't want a form to be there.
-splash_text: check back on monday...
+#splash_text: check back on monday...
 
 # Sitemap settings
 change_frequency: monthly
