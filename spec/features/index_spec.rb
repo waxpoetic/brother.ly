@@ -10,9 +10,8 @@ feature 'index page' do
 
   before { visit '/' }
 
-  it 'shows the title and description' do
+  it 'shows the site title' do
     expect(page).to have_content(data.site)
-    expect(page).to have_content(data.description)
   end
 
   it 'links to social networks' do
