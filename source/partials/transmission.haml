@@ -16,7 +16,7 @@
             = link_to_artist name.titleize.downcase
             .bio
               %p
-                %strong= link_to 'soundcloud', attributes[:soundcloud]
+                %strong= link_to 'soundcloud', attributes[:soundcloud], target: '_blank'
               = markdown attributes[:biography]
       .buttons
         %a.back-to-top.icon-arrow-left{href: '#', data: {offset: '-45'}} Back To Top

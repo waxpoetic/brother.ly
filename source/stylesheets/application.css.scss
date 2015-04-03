@@ -36,7 +36,7 @@ nav {
   max-height: 2100px;
 
   .body {
-    padding: 15%;
+    padding: 5%;
     min-width: 498px;
 
     @media only screen and (max-width: 640px) {
@@ -65,13 +65,12 @@ nav {
 }
 
 #transmission {
-  background: #222 no-repeat center center;
-  background-image: url(/images/maxresdefault.jpg);
+  background: #222 url(/images/maxresdefault.jpg) no-repeat fixed center;
 
   .information {
     background: rgba(0,0,0, 0.75);
     padding: 20px;
-    max-width: 55%;
+    max-width: 65%;
 
     @media only screen and (max-width: 640px) {
       max-width: 640px;
