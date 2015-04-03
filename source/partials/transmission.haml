@@ -12,11 +12,12 @@
       %h3 featuring...
       %ul.artists
         - data.artists.each do |name, attributes|
-          %li{ id: name }
+          %li.artist{ id: name }
             = link_to_artist name.titleize.downcase
+            %ul.links
+              - attributes.reject { |site, _| site == 'biography' }.each do |site, href|
+                %li.link= link_to icon_tag(site), href, target: '_blank'
             .bio
-              %p
-                %strong= link_to 'soundcloud', attributes[:soundcloud], target: '_blank'
               = markdown attributes[:biography]
       .buttons
         %a.back-to-top.icon-arrow-left{href: '#', data: {offset: '-45'}} Back To Top
