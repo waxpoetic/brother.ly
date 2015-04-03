@@ -1,5 +1,14 @@
 # Add helpers for link_to
 module UrlHelper
+  def icon_tag(name)
+    icon = if name == 'website'
+             'globe'
+           else
+             name
+           end
+    content_tag :i, '&nbsp;', class: "fa fa-#{icon}"
+  end
+
   def link_to_artist(name)
     text = ['<i class="icon-arrow-left arrow">&nbsp;</i>', name].join
     id = '#' + name.parameterize.underscore
