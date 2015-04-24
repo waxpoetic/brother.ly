@@ -24,6 +24,18 @@ feature 'index page' do
     expect(page).to have_content('next transmission...')
   end
 
+  it 'renders the form when no live event is scheduled' do
+    unless data.live_event_url.present?
+      expect(page).to have_content('RSVP for our next event')
+    end
+  end
+
+  it 'renders the live event when a url is scheduled' do
+    if data.live_event_url.present?
+      expect(page).to have_content('Connecting to Live Event...')
+    end
+  end
+
   it 'toggles biography visibility for each artist when clicked' do
     click_link 'the wonder bars'
     expect(page.find('#the_wonder_bars .bio')).to be_visible

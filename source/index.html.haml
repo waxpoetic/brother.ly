@@ -12,7 +12,7 @@ priority: 1.0
       %h1.page-title= data.site.site
 
       - if live_event?
-        <iframe id="stream" width="560" height="315" src="#{data.site.live_event_url}" frameborder="0" allowfullscreen></iframe>
+        <iframe id="stream" width="560" height="315" src="#{data.site.live_event_url}" frameborder="0" allowfullscreen>Connecting to Live Event...</iframe>
       - elsif open_signups?
         = partial :signup
       - else
