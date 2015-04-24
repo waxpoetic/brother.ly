@@ -9,7 +9,7 @@ publisher_twitter: http://brother.ly
 pull_image: http://brother.ly/images/header.jpg
 
 # Configurable text to show when we don't want a form to be there.
-#splash_text: check back on monday...
+splash_text:
 
 # Sitemap settings
 change_frequency: monthly
@@ -17,7 +17,7 @@ priority: 0.5
 
 # Live event URL, re-enable this when the event is occurring to show
 # it on the index page.
-#live_event_url: https://www.youtube.com/embed/rsTwMllpWQA?rel=0
+live_event_url: https://www.youtube.com/embed/rsTwMllpWQA?rel=0&autoplay=1
 
 # Social media links
 youtube_url: https://www.youtube.com/channel/UCXAX6k7RUqAVWSG0YMYOmqw

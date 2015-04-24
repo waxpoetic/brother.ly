@@ -11,10 +11,10 @@ priority: 1.0
 
       %h1.page-title= data.site.site
 
-      - if open_signups?
-        = partial :signup
-      - elsif live_event?
+      - if live_event?
         <iframe id="stream" width="560" height="315" src="#{data.site.live_event_url}" frameborder="0" allowfullscreen></iframe>
+      - elsif open_signups?
+        = partial :signup
       - else
         %h2.page-description#slogan= data.site.description
         %h2.page-description#signups-closed= data.site.splash_text
