@@ -6,6 +6,8 @@
 #
 # Here's an example of a basic artist entry:
 #
-#   artist_name:
-#     bio: A short biography about the artist
-#     soundcloud: http://soundcloud.com/artist-name
+# ```yaml
+# artist_name:
+#   bio: A short biography about the artist
+#   soundcloud: http://soundcloud.com/artist-name
+# ```

@@ -8,6 +8,11 @@ feature 'index page' do
     )
   end
 
+  let(:artists) do
+    YAML.load_file(File.join(APP_ROOT, 'data', 'artists.yml'))
+  end
+
+
   before { visit '/' }
 
   it 'shows the site title' do
@@ -25,19 +30,25 @@ feature 'index page' do
   end
 
   it 'renders the form when no live event is scheduled' do
-    unless data.live_event_url.present?
-      expect(page).to have_content('RSVP for our next event')
+    unless data.live_event_url
+      if data.splash_text
+        expect(page).to have_content(data.splash_text)
+      else
+        expect(page).to have_content('RSVP for our next event')
+      end
     end
   end
 
   it 'renders the live event when a url is scheduled' do
-    if data.live_event_url.present?
+    if data.live_event_url
       expect(page).to have_content('Connecting to Live Event...')
     end
   end
 
-  xit 'toggles biography visibility for each artist when clicked' do
-    click_link 'the wonder bars'
-    expect(page.find('#the_wonder_bars .bio')).to be_visible
+  it 'toggles biography visibility for each artist when clicked' do
+    if artists
+      click_link artists.keys.first.titleize.downcase
+      expect(page.find("##{artists.keys.first} .bio")).to be_visible
+    end
   end
 end
