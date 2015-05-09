@@ -12,7 +12,6 @@ feature 'index page' do
     YAML.load_file(File.join(APP_ROOT, 'data', 'artists.yml'))
   end
 
-
   before { visit '/' }
 
   it 'shows the site title' do
