@@ -8,16 +8,17 @@ twitter_author: brotherlyparty
 publisher_twitter: http://brother.ly
 pull_image: http://brother.ly/images/header.jpg
 
-# Configurable text to show when we don't want a form to be there.
-splash_text:
-
 # Sitemap settings
 change_frequency: monthly
 priority: 0.5
 
-# Live event URL, re-enable this when the event is occurring to show
-# it on the index page.
-live_event_url: https://www.youtube.com/embed/yMMfk0Fx560?rel=0&autoplay=1
+# When filled in, show this text instead of the RSVP form.
+splash_text: next transmission will be announced shortly
+
+
+# When filled in, render a YouTube Live Event video instead of the form
+# or message.
+live_event_url:
 
 # Social media links
 youtube_url: https://www.youtube.com/channel/UCXAX6k7RUqAVWSG0YMYOmqw

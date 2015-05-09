@@ -4,20 +4,23 @@
       %h1
         next transmission...
       %h1
-        friday, april 24th at 10pm
+        friday, may 22nd at 10pm eastern
       %p
-        from a private undisclosed location in philadelphia
-      %p
+        from a private undisclosed location in philadelphia.<br>
         live video transmission on <a href="http://brother.ly">http://brother.ly</a>.
-      %h3 featuring...
-      %ul.artists
-        - data.artists.each do |name, attributes|
-          %li.artist{ id: name }
-            = link_to_artist name.titleize.downcase
-            %ul.links
-              - attributes.reject { |site, _| site == 'biography' }.each do |site, href|
-                %li.link= link_to icon_tag(site), href, target: '_blank'
-            .bio
-              = markdown attributes[:biography]
+      - if data.artists
+        %h3 featuring...
+        %ul.artists
+        - if data.artists
+          - data.artists.each do |name, attributes|
+            %li.artist{ id: name }
+              = link_to_artist name.titleize.downcase
+              %ul.links
+                - attributes.reject { |site, _| site == 'biography' }.each do |site, href|
+                  %li.link= link_to icon_tag(site), href, target: '_blank'
+              .bio
+                = markdown attributes[:biography]
+      - else
+        %h3 artists will be announced shortly...
       .buttons
         %a.back-to-top.icon-arrow-left{href: '#', data: {offset: '-45'}} Back To Top

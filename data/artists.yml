@@ -1,20 +1,11 @@
-michael_nighttime:
-  soundcloud: https://soundcloud.com/michael-nighttime
-  facebook: https://www.facebook.com/michaelnighttime
-  biography: "You might know him from his ultra-exclusive parties or his anything-goes DJ sets here in Philadelphia. But perhaps just as long as he's been playing sexy bangers for unrelenting audiences, Michael NightTime has been cooking up electronic productions in a variety of genres. His latest EP on Party Time Society is somewhat of a departure from his earlier work, but retains the playful and care-free vibes of his first two self-released albums."
-
-mambisa:
-  soundcloud: https://soundcloud.com/mambisamambisa
-  facebook: https://www.facebook.com/musica.mambisa
-  biography: "A truly eclectic performer, Mambisa's DJ sets are heavily influenced by the global bass and tropical bass sounds, as are her own productions. Expect to hear anything and everything, but no matter what you hear, it's going to be funky."
-
-highly_desirable:
-  soundcloud: https://soundcloud.com/highly-desirable
-  biography: "Highly Desirable is a collaboration between Philadelphia Jungle veterans Dick Bagel and Dread Scott (Bubbles). Their particular style of minimal jungle, unlike most of their peers, remains true to Jungle's origins as a music derived from breakbeat samples."
-
-the_wonder_bars:
-  soundcloud: https://soundcloud.com/wonderbars
-  facebook: https://facebook.com/wonderbars
-  twitter: http://twitter.com/wonderbars
-  website: http://thewonderbars.com
-  biography: "A live electro-acoustic band employing real musicians, live theatrics and spontaneous improvisation. Born out of Philadelphia's house music scene and Burner culture, The Wonder Bars are among a new generation of performing artists who have eschewed turntables in favor of playing their special brand of house and garage music with real instruments."
+# When populated, this file is used as copy on the transmission section
+# for each artist's biography. It also includes a means of adding social
+# media links that basically looks at any unknown attribute and treats
+# it as some form of URL. If a proper icon can't be found, a default one
+# is used to represent the link text.
+#
+# Here's an example of a basic artist entry:
+#
+#   artist_name:
+#     bio: A short biography about the artist
+#     soundcloud: http://soundcloud.com/artist-name
