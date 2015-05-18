@@ -277,3 +277,14 @@ ul.artists {
 #stream {
   margin: 25px auto;
 }
+
+#ticket-link {
+  background: rgba(0,0,0,0.5);
+  padding: 15px;
+
+  font-weight: bold;
+
+  a {
+    color: #008CBA;
+  }
+}

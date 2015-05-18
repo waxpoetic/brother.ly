@@ -15,6 +15,9 @@ priority: 1.0
         <iframe id="stream" width="560" height="315" src="#{data.site.live_event_url}" frameborder="0" allowfullscreen>Connecting to Live Event...</iframe>
       - elsif open_signups?
         = partial :signup
+      - elsif tickets_available?
+        %h2.page-description#ticket-link
+          Tickets to our next event are <a href="#{data.site.ticket_url}">on sale now</a>!
       - else
         %h2.page-description#slogan= data.site.description
         %h2.page-description#signups-closed= data.site.splash_text

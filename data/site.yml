@@ -12,13 +12,16 @@ pull_image: http://brother.ly/images/header.jpg
 change_frequency: monthly
 priority: 0.5
 
-# When filled in, show this text instead of the RSVP form.
-splash_text: next transmission will be announced shortly
+# When filled in, show this text instead of the RSVP form or the ticket
+# link.
+splash_text:
 
+# When filled in, show this instead of the RSVP form.
+ticket_url: http://bit.ly/1H2iMZT
 
 # When filled in, render a YouTube Live Event video instead of the form
 # or message.
-#live_event_url: https://www.youtube.com/embed/yMMfk0Fx560?rel=0&autoplay=1
+live_event_url:
 
 # Social media links
 youtube_url: https://www.youtube.com/channel/UCXAX6k7RUqAVWSG0YMYOmqw

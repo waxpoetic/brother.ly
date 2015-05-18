@@ -10,7 +10,11 @@ module DataHelper
   end
 
   def open_signups?
-    data.site.splash_text.blank?
+    data.site.splash_text.blank? && data.site.ticket_url.blank?
+  end
+
+  def tickets_available?
+    data.site.ticket_url.present?
   end
 
   def live_event?
