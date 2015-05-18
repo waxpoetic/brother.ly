@@ -28,7 +28,7 @@ feature 'index page' do
     expect(page).to have_content('next transmission...')
   end
 
-  it 'renders the form when no live event is scheduled and no ticket link is up' do
+  it 'renders the form when necessary' do
     unless data.live_event_url || data.ticket_url
       if data.splash_text
         expect(page).to have_content(data.splash_text)
@@ -43,7 +43,6 @@ feature 'index page' do
       expect(page).to have_content('Tickets are on sale now!')
     end
   end
-
 
   it 'renders the live event when a url is scheduled' do
     if data.live_event_url
