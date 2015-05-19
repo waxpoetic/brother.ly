@@ -1,6 +1,6 @@
 ---
 name: Home
-cover: blurred.jpg
+cover: drink.jpg
 priority: 1.0
 ---
 
@@ -22,9 +22,10 @@ priority: 1.0
         %h2.page-description#slogan= data.site.description
         %h2.page-description#signups-closed= data.site.splash_text
 
-  %p.scroll-text Scroll Down
-  %a.scroll-down.icon-arrow-left{href: '#transmission', data: {offset: '-45'}}
-    %span.hidden Scroll Down
+  %a.scroll{ href: '#transmission' }
+    %p#scroll-text Scroll Down
+    .scroll-down.icon-arrow-left{href: '#transmission', data: {offset: '-45'}}
+      %span.hidden Scroll Down
 
 %main#content.content{role: :main}
   = partial :transmission

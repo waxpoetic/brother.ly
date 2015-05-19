@@ -115,6 +115,5 @@ page '/sitemap.xml', layout: false
 activate :title, title: data.site.title, separator: ' | '
 
 # Auto-prefix CSS rules
-activate :autoprefixer do |config|
-  config.browsers = ['last 2 versions', 'Explorer >= 9']
-end
+require 'autoprefixer-rails'
+activate :autoprefixer

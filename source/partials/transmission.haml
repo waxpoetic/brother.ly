@@ -21,6 +21,6 @@
               .bio
                 = markdown attributes[:biography]
       - else
-        %h3 artists will be announced shortly...
+        %h3= link_to 'artists have been announced', 'http://bit.ly/1H2iMZT'
       .buttons
         %a.back-to-top.icon-arrow-left{href: '#', data: {offset: '-45'}} Back To Top

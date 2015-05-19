@@ -1,18 +1,21 @@
 @import 'font-awesome';
 @import 'vendor/casper';
 
-p.scroll-text {
-  font-size: 34px;
-  text-align: center;
-  text-decoration: none;
-  color: rgba(255,255,255,0.5);
-  font-family: 'Open Sans', sans-serif;
+#scroll-text {
+  display: block;
+  position: absolute;
+  z-index: 100;
+  bottom: 45px;
+  left: 50%;
+  margin-left: -56px;
+  width: 109px;
   height: 34px;
   font-size: 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
   text-transform: uppercase;
-  position: absolute;
-  left: 46%;
-  bottom: 55px;
+  color: rgba(255,255,255,0.5);
 }
 
 .scroll-down {
@@ -199,6 +202,7 @@ form fieldset {
 
 .page-title {
   text-shadow: 2px 2px #222;
+  margin-bottom: 30px;
 
   @media only screen and (max-width: 640px) {
     position: relative;
