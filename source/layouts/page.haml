@@ -1,10 +1,10 @@
 = wrap_layout :layout do
-  %header.main-header.post-head{cover}
+  %header.main-header{cover}
     = partial :navigation
+    .vertical
+      #splash.main-header-content.inner
 
-  %main.content{role: :main}
-    %article.post
-      %header.post-header
-        %h1.post-title= current_page.data.title
-      %section.post-content
+        %h1.page-title= data.site.site
+        %h2.page-description#slogan= page_name
+
         = yield
