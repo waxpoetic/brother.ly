@@ -39,7 +39,7 @@ RSpec.feature 'index page' do
   end
 
   it 'renders the ticket link when a url is present' do
-    unless data.ticket_url
+    if data.ticket_url && !data.live_event_url
       expect(page).to have_content('Tickets are on sale now!')
     end
   end
