@@ -26,6 +26,6 @@ module DataHelper
   end
 
   def page_name
-    current_page.data.name || site_title
+    current_page.data.name || date.site.site
   end
 end

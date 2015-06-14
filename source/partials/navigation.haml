@@ -1,7 +1,15 @@
 %nav.main-nav.overlay.clearfix
-  /%a.blog-logo{href: home_path}= image_tag 'logo.png', alt: 'brother.ly'
+  - unless current_page.path == 'index.html'
+    %section.title
+      %h1
+        %a{ href: '/' } brother.ly
   %section.buttons
     = link_to_icon :location, 'Next', '#transmission'
     = link_to_icon :feed, 'Subscribe', data.site.youtube_url, target: '_blank'
     = link_to_icon :twitter, 'Follow', data.site.twitter_url, target: '_blank'
-    = link_to_icon :facebook, 'Like', data.site.facebook_url, target: '_blank'
+    = link_to data.site.facebook_url, target: '_blank' do
+      = icon_tag :facebook
+      Like
+    = link_to '/archives' do
+      = icon_tag(:archive)
+      Archives

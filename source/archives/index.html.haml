@@ -1,0 +1,35 @@
+---
+name: archives
+cover: drink.jpg
+priority: 0.9
+---
+%header.main-header{cover}
+  = partial :navigation
+  .vertical
+    #splash.main-header-content.inner
+      .archives
+        %h1.page-title view archives...
+        %ul
+          - data.events.each do |num, _|
+            %li= link_to "brother.ly #{num}", "##{num}"
+
+  %a.scroll{ href: '#transmission' }
+    %p#scroll-text Scroll Down
+    .scroll-down.icon-arrow-left{href: '#transmission', data: {offset: '-45'}}
+      %span.hidden Scroll Down
+
+%main#content.content{role: :main}
+  - data.events.each do |num, event|
+    %section.event{id: num}
+      .body
+        .information
+          %h1 brother.ly #{num}
+          %h2= event.artists.to_sentence
+          - if event.video.present?
+            %iframe{ width: 560, height: 315, src: event.video, frameborder: 0, allowfullscreen: true}
+              Loading archive...
+          - if event.recording.present?
+            %a{ href: event.recording, target: '_blank' }
+              Download Event Recording
+      .buttons
+        %a.back-to-top.icon-arrow-left{href: '#', data: {offset: '-45'}} Back To Top

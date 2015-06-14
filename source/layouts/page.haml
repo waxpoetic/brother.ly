@@ -2,9 +2,5 @@
   %header.main-header{cover}
     = partial :navigation
     .vertical
-      #splash.main-header-content.inner
-
-        %h1.page-title= data.site.site
-        %h2.page-description#slogan= page_name
-
+      %section#page.main-header-content.inner
         = yield
