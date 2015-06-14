@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'ostruct'
 
-feature 'index page' do
+RSpec.feature 'index page' do
   let(:data) do
     OpenStruct.new(
       YAML.load_file(File.join(APP_ROOT, 'data', 'site.yml'))
