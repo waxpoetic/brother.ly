@@ -11,3 +11,27 @@
 #   bio: A short biography about the artist
 #   soundcloud: http://soundcloud.com/artist-name
 # ```
+
+mr._jennings:
+  soundcloud: https://soundcloud.com/mrjennings
+  facebook: https://www.facebook.com/misterjennings
+  website: http://www.mr-jennings.com
+  twitter: https://twitter.com/MrJenningsMusic
+  biography: "Founder of the Party Liberation Front and a staple of Richmond, Virginia's excellent homegrown bass music scene, Mr. Jennings has been making your booty shake for years. If you've been at practically any burn on the east coast, you have probably heard his music. He's fresh off the release of his latest Integalactic Speakeasy EP, so expect to hear some otherworldly bass."
+
+the_wonder_bars:
+  soundcloud: https://soundcloud.com/wonderbars
+  facebook: https://facebook.com/wonderbars
+  website: http://thewonderbars.com
+  twitter: http://twitter.com/wonderbars
+  biography: "A live electro-acoustic band employing real musicians, live theatrics and spontaneous improvisation. Born out of Philadelphia's house music scene and Burner culture, The Wonder Bars are among a new generation of performing artists who have eschewed turntables in favor of playing their special brand of house and garage music with real instruments."
+
+phil_yeah:
+  soundcloud: https://soundcloud.com/philyeah
+  biography: "Phil Yeah's eclectic and intriguing DJ sets are well known by this point, but he hasn't been booked to do a live set of original music in over a year. His brand new original live set is poised to get you humming."
+
+sixninebot:
+  soundcloud: https://soundcloud.com/69bot
+  facebook: https://www.facebook.com/sixninebot
+  twitter: https://twitter.com/hotlava69
+  biography: "A relative newcomer to Philadelphia's house scene, Sixninebot's production style and tenacious DJ style has already earned him the respect of club and radio DJs alike. With regular performances at Medusa Lounge and on WKDU, Sixninebot's music is no stranger to the airwaves, but this will be his first video stream."
