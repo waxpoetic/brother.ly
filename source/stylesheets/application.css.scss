@@ -1,6 +1,11 @@
 @import 'font-awesome';
 @import 'vendor/casper';
 
+.site-footer {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
 #scroll-text {
   display: block;
   position: absolute;
@@ -82,7 +87,7 @@ nav {
 }
 
 #transmission {
-  background: #222 url(/images/maxresdefault.jpg) no-repeat fixed center;
+  background: #000 url(/images/collective.jpg) no-repeat fixed right;
 
   .information {
     background: rgba(0,0,0, 0.75);
