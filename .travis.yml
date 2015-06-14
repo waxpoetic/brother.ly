@@ -9,6 +9,8 @@ env:
 before_install: gem update bundler
 script: make
 deploy:
+  on:
+    branch: master
   provider: s3
   bucket: brother.ly
   acl: public_read

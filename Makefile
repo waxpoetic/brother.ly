@@ -6,7 +6,7 @@ SHELL = /bin/bash
 
 .PHONY: config clean check test watch all
 
-all: test build
+all: test clean build
 
 clean:
 	rm -rf build
@@ -14,7 +14,7 @@ clean:
 check: vendor/bundle
 	bundle exec rubocop
 
-build: vendor/bundle clean
+build: vendor/bundle
 	bundle exec middleman build --verbose
 
 test: vendor/bundle check
