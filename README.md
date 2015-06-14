@@ -46,6 +46,25 @@ You can also build the project into static files at any time:
 $ make clean build
 ```
 
+Building the application properly requires the <http://brother.ly> AWS
+keys, which we do not distribute. However, failing on this last step
+will not prevent the entire app from building, so you can still use this
+task even though it errors in the end. If for some reason you need to
+build the app and you have the AWS keys, you can run the following task
+to build the `.env` configuration:
+
+```bash
+$ make config
+```
+
+Contributions will not be accepted without accompanying tests. To make
+sure your tests pass and you are adhering to this application's
+conventions, run the following Make task:
+
+```bash
+$ make test
+```
+
 ## License
 
 The MIT License (MIT)
