@@ -53,7 +53,8 @@ RSpec.feature 'index page' do
   it 'toggles biography visibility for each artist when clicked' do
     if artists
       click_link artists.keys.first.titleize.downcase
-      expect(page.find("##{artists.keys.first} .bio")).to be_visible
+      id = artists.keys.first.gsub(/\./, '')
+      expect(page.find("##{id} .bio")).to be_visible
     end
   end
 end
