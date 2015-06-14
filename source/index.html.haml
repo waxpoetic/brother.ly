@@ -17,7 +17,7 @@ priority: 1.0
         = partial :signup
       - elsif tickets_available?
         %h2.page-description#ticket-link
-          Tickets to our next event are <a href="#{data.site.ticket_url}">on sale now</a>!
+          Tickets to our next event are <a href="#{data.site.ticket_url}" target="_blank">on sale now</a>!
       - else
         %h2.page-description#slogan= data.site.description
         %h2.page-description#signups-closed= data.site.splash_text
