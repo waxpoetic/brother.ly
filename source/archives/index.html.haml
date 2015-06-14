@@ -10,8 +10,12 @@ priority: 0.9
       .archives
         %h1.page-title view archives...
         %ul
-          - data.events.each do |num, _|
-            %li= link_to "brother.ly #{num}", "##{num}"
+          - data.events.each do |num, event|
+            %li
+              = link_to "brother.ly #{num}:", "##{num}"
+              &nbsp;
+              = event.date
+
 
   %a.scroll{ href: '#transmission' }
     %p#scroll-text Scroll Down

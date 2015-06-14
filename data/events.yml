@@ -1,4 +1,5 @@
 one:
+  date: "friday, april 24th, 2015"
   #recording: http://brother.ly/archives/one.mp3
   artists:
     - Michael Nighttime
@@ -6,6 +7,7 @@ one:
     - Highly Desirable
     - Mambisa
 two:
+  date: "friday, may 22nd, 2015"
   #video: https://www.youtube.com/embed/vd7JdXh2uYk?rel=0
   artists:
     - Tim the Enchanter
