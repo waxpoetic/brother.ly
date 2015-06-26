@@ -17,11 +17,11 @@ priority: 0.5
 splash_text:
 
 # When filled in, show this instead of the RSVP form.
-ticket_url: http://bit.ly/brotherly3
+ticket_url:
 
 # When filled in, render a YouTube Live Event video instead of the form
 # or message.
-live_event_url:
+live_event_url: https://www.youtube.com/embed/UOXWYaFpDsY?autoplay=1
 
 # Social media links
 youtube_url: https://www.youtube.com/channel/UCXAX6k7RUqAVWSG0YMYOmqw
