@@ -10,7 +10,7 @@ env:
   - secure: cWT0gPKyu/kU5HmFW/x5gSM41tfv9qmmn69KZ0NhLjjmZOch3ARYFpWPywRrrWowIl4QnS5k8cj2aW9FpPNbEuOJW4gdO9kgqEWI8kOKZXKQgjOpA2LuGQy2UOiOrfQADNrAJ4C+DCPqJH43cSSK3EHcRH9hczEyigL/yj3KIbw=
   - secure: hMaQe2QeLQcHrOoHLi62ng4+DBVz41blMEmzImOSOGXMw4CzwQ9V/IYBQEMnP7u8pnz9stCLMQLYD6FRJ+pJsZDPW/ACINPlpVUbJwVdFcYebkA4tplcmI9uz1RdVUeeaX7eJOho+8vZ/agyC8otSEVDBSfcpsClnx4I47Ijr/g=
 before_install: gem update bundler
-script: make
+script: bundle exec middleman build
 deploy:
   on:
     branch: master
