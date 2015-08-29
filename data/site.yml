@@ -21,7 +21,7 @@ ticket_url:
 
 # When filled in, render a YouTube Live Event video instead of the form
 # or message.
-live_event_url:
+live_event_url: https://www.youtube.com/embed/Mg-LfxWY5hc
 
 # Social media links
 youtube_url: https://www.youtube.com/channel/UCXAX6k7RUqAVWSG0YMYOmqw
